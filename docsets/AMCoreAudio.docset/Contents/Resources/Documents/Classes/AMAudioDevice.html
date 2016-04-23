@@ -162,6 +162,66 @@ If you need an unique identifier that persists between restarts, use <code><a hr
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:ZFC11AMCoreAudio13AMAudioDevice10lookupByIDFVs6UInt32S0_"></a>
+                    <a name="//apple_ref/swift/Method/lookupByID(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11AMCoreAudio13AMAudioDevice10lookupByIDFVs6UInt32S0_">lookupByID(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an <code><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></code> by providing a valid audio device identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookupByID</span><span class="p">(</span><span class="kt">ID</span><span class="p">:</span> <span class="kt">AudioObjectID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AMAudioDevice</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC11AMCoreAudio13AMAudioDevice11lookupByUIDFSSGSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/lookupByUID(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC11AMCoreAudio13AMAudioDevice11lookupByUIDFSSGSqS0__">lookupByUID(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an <code><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></code> by providing a valid audio device unique identifier.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If unique identifier is not valid, <code>nil</code> will be returned.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookupByUID</span><span class="p">(</span><span class="nv">deviceUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AMAudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC11AMCoreAudio13AMAudioDevice23setAsDefaultInputDeviceFT_Sb"></a>
                     <a name="//apple_ref/swift/Method/setAsDefaultInputDevice()" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC11AMCoreAudio13AMAudioDevice23setAsDefaultInputDeviceFT_Sb">setAsDefaultInputDevice()</a>
