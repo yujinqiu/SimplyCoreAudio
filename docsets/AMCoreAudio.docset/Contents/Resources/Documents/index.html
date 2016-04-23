@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AMCoreAudio  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AMCoreAudio  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AMCoreAudio Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AMCoreAudio Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AMCoreAudio  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AMAudioDevice.html">AMAudioDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AMAudioHardware.html">AMAudioHardware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AMAudioObject.html">AMAudioObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AMAudioStream.html">AMAudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AMNotificationCenter.html">AMNotificationCenter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AMAudioDeviceEvent.html">AMAudioDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AMAudioHardwareEvent.html">AMAudioHardwareEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AMAudioStreamEvent.html">AMAudioStreamEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Direction.html">Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TransportType.html">TransportType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:P11AMCoreAudio7AMEvent">AMEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AMEventSubscriber.html">AMEventSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:V11AMCoreAudio10VolumeInfo">VolumeInfo</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#amcoreaudio' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='amcoreaudio'>AMCoreAudio</h2>
+
+<p><a href="http://cocoadocs.org/docsets/AMCoreAudio"><img src="http://cocoapod-badges.herokuapp.com/v/AMCoreAudio/badge.png" alt="Version"></a>
+<a href="http://cocoadocs.org/docsets/AMCoreAudio"><img src="http://cocoapod-badges.herokuapp.com/p/AMCoreAudio/badge.png" alt="Platform"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/rnine/AMCoreAudio"><img src="https://img.shields.io/github/tag/rnine/AMCoreAudio.svg" alt="GitHub tag"></a>
+<a href="https://github.com/rnine/AMCoreAudio/blob/develop/LICENSE.md"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License"></a></p>
+
+<p><code>AMCoreAudio</code> is a Swift wrapper for <a href="https://developer.apple.com/library/mac/documentation/MusicAudio/Conceptual/CoreAudioOverview/">Apple&rsquo;s Core Audio</a> framework focusing on:</p>
+
+<ul>
+<li>Simplifying audio device enumeration</li>
+<li>Providing accessors for the most relevant audio device properties (i.e., device name, device manufacturer, device UID, volume, mute, sample rate, clock source, etc.)</li>
+<li>Subscribing to system and audio device specific notifications using delegation</li>
+<li>Managing (physical and virtual) audio streams associated to an audio device</li>
+<li>Subscribing for audio stream notifications</li>
+<li>etc.</li>
+</ul>
+
+<p><code>AMCoreAudio</code> is currently powering <a href="http://audiomateapp.com">AudioMate</a> (recently open-sourced and available at <a href="https://github.com/The9Labs/AudioMate">https://github.com/The9Labs/AudioMate</a>).</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='requirements'>Requirements</h3>
+
+<ul>
+<li>Xcode 7 and Swift 2</li>
+<li>OS X 10.9 or later</li>
+</ul>
+
+<p><strong>Note:</strong> If you are targeting OS X 10.7 or 10.8 please use the <a href="https://github.com/rnine/AMCoreAudio/tree/objc">objc branch</a>.</p>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='documentation'>Documentation</h3>
+
+<ul>
+<li><a href="http://rnine.github.io/AMCoreAudio">AMCoreAudio Documentation</a> (powered by <a href="https://github.com/realm/jazzy">jazzy ♪♫</a> and <a href="https://pages.github.com">GitHub Pages</a>)</li>
+</ul>
+<a href='#further_development_amp_patches' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='further_development_amp_patches'>Further Development &amp; Patches</h3>
+
+<p>Do you want to contribute to the project? Please fork, patch, and then submit a pull request!</p>
+<a href='#sample_projects' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='sample_projects'>Sample Projects</h3>
+
+<ul>
+<li><a href="https://github.com/The9Labs/AudioMate">AudioMate</a> (a full-featured app recently open-sourced.)</li>
+</ul>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='license'>License</h3>
+
+<p><code>AMCoreAudio</code> was written by Ruben Nine (<a href="https://twitter.com/sonicbee9">@sonicbee9</a>) in 2013-2014 (open-sourced in March 2014) and is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. See <a href="LICENSE.md">LICENSE.md</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-04-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

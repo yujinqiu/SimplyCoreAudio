@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AMAudioStreamEvent Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/AMAudioStreamEvent" class="dashAnchor"></a>
+    <a title="AMAudioStreamEvent Enum Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AMCoreAudio Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AMCoreAudio Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AMAudioStreamEvent Enum Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AMAudioDevice.html">AMAudioDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AMAudioHardware.html">AMAudioHardware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AMAudioObject.html">AMAudioObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AMAudioStream.html">AMAudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AMNotificationCenter.html">AMNotificationCenter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AMAudioDeviceEvent.html">AMAudioDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AMAudioHardwareEvent.html">AMAudioHardwareEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AMAudioStreamEvent.html">AMAudioStreamEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Direction.html">Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TransportType.html">TransportType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P11AMCoreAudio7AMEvent">AMEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AMEventSubscriber.html">AMEventSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:V11AMCoreAudio10VolumeInfo">VolumeInfo</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AMAudioStreamEvent</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AMAudioStreamEvent</span><span class="p">:</span> <span class="kt">AMEvent</span></code></pre>
+
+                </div>
+              </div>
+            <p>// <code>AMAudioStreamEvent</code> enum</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO11AMCoreAudio18AMAudioStreamEvent17IsActiveDidChangeFMS0_FT11audioStreamCS_13AMAudioStream_S0_"></a>
+                    <a name="//apple_ref/swift/Element/IsActiveDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio18AMAudioStreamEvent17IsActiveDidChangeFMS0_FT11audioStreamCS_13AMAudioStream_S0_">IsActiveDidChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the audio stream <code>isActive</code> flag changes state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">IsActiveDidChange</span><span class="p">(</span><span class="nv">audioStream</span><span class="p">:</span> <span class="kt">AMAudioStream</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO11AMCoreAudio18AMAudioStreamEvent23PhysicalFormatDidChangeFMS0_FT11audioStreamCS_13AMAudioStream_S0_"></a>
+                    <a name="//apple_ref/swift/Element/PhysicalFormatDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio18AMAudioStreamEvent23PhysicalFormatDidChangeFMS0_FT11audioStreamCS_13AMAudioStream_S0_">PhysicalFormatDidChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the audio stream physical format changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">PhysicalFormatDidChange</span><span class="p">(</span><span class="nv">audioStream</span><span class="p">:</span> <span class="kt">AMAudioStream</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-04-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
