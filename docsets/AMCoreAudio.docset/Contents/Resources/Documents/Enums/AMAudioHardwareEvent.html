@@ -14,7 +14,7 @@
     <a title="AMAudioHardwareEvent Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AMCoreAudio Docs</a> (100% documented)</p>
+        <p><a href="../index.html">AMCoreAudio Docs</a> (95% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -44,6 +44,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AMNotificationCenter.html">AMNotificationCenter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BundleInfo.html">BundleInfo</a>
               </li>
             </ul>
           </li>
@@ -94,7 +97,7 @@
             <h1>AMAudioHardwareEvent</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AMAudioHardwareEvent</span><span class="p">:</span> <span class="kt">AMEvent</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AMAudioHardwareEvent</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P11AMCoreAudio7AMEvent">AMEvent</a></span></code></pre>
 
                 </div>
               </div>
@@ -107,9 +110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent17DeviceListChangedFMS0_FT12addedDevicesGSaCS_13AMAudioDevice_14removedDevicesGSaS1___S0_"></a>
-                    <a name="//apple_ref/swift/Element/DeviceListChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent17DeviceListChangedFMS0_FT12addedDevicesGSaCS_13AMAudioDevice_14removedDevicesGSaS1___S0_">DeviceListChanged</a>
+                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent17deviceListChangedFMS0_FT12addedDevicesGSaCS_13AMAudioDevice_14removedDevicesGSaS1___S0_"></a>
+                    <a name="//apple_ref/swift/Element/deviceListChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent17deviceListChangedFMS0_FT12addedDevicesGSaCS_13AMAudioDevice_14removedDevicesGSaS1___S0_">deviceListChanged</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -125,7 +128,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">DeviceListChanged</span><span class="p">(</span><span class="nv">addedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt">AMAudioDevice</span><span class="p">],</span> <span class="nv">removedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt">AMAudioDevice</span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">deviceListChanged</span><span class="p">(</span><span class="nv">addedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></span><span class="p">],</span> <span class="nv">removedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -139,9 +142,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent25DefaultInputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
-                    <a name="//apple_ref/swift/Element/DefaultInputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent25DefaultInputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">DefaultInputDeviceChanged</a>
+                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent25defaultInputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/defaultInputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent25defaultInputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">defaultInputDeviceChanged</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -156,7 +159,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">DefaultInputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt">AMAudioDevice</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">defaultInputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -170,9 +173,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent26DefaultOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
-                    <a name="//apple_ref/swift/Element/DefaultOutputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent26DefaultOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">DefaultOutputDeviceChanged</a>
+                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent26defaultOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/defaultOutputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent26defaultOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">defaultOutputDeviceChanged</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,7 +190,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">DefaultOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt">AMAudioDevice</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">defaultOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -201,9 +204,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent32DefaultSystemOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
-                    <a name="//apple_ref/swift/Element/DefaultSystemOutputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent32DefaultSystemOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">DefaultSystemOutputDeviceChanged</a>
+                    <a name="/s:FO11AMCoreAudio20AMAudioHardwareEvent32defaultSystemOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/defaultSystemOutputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio20AMAudioHardwareEvent32defaultSystemOutputDeviceChangedFMS0_FT11audioDeviceCS_13AMAudioDevice_S0_">defaultSystemOutputDeviceChanged</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -218,7 +221,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">DefaultSystemOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt">AMAudioDevice</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">defaultSystemOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -230,8 +233,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-04-26)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-10-05)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -1,1 +1,54 @@
-{"warnings":[],"source_directory":"/Users/ruben/src/frameworks/AMCoreAudio"}
+{
+  "warnings": [
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioObject.swift",
+      "line": 110,
+      "symbol": "AMAudioObject.isEqual(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 11,
+      "symbol": "BundleInfo",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 16,
+      "symbol": "BundleInfo.buildDate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 17,
+      "symbol": "BundleInfo.name",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 18,
+      "symbol": "BundleInfo.version",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 19,
+      "symbol": "BundleInfo.buildNumber",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
+      "line": 21,
+      "symbol": "BundleInfo.buildInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/ruben/src/frameworks/AMCoreAudio"
+}
