@@ -16,9 +16,9 @@
     },
     {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioObject.swift",
-      "line": 133,
-      "symbol": "AMAudioObject.isEqual(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "line": 386,
+      "symbol": "==(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
