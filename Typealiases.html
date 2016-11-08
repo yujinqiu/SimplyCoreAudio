@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Protocols  Reference</title>
+    <title>Typealiases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Protocols  Reference"></a>
+    <a title="Typealiases  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">AMCoreAudio Docs</a> (76% documented)</p>
@@ -20,7 +20,7 @@
       <p id="breadcrumbs">
         <a href="index.html">AMCoreAudio Reference</a>
         <img id="carat" src="img/carat.png" />
-        Protocols  Reference
+        Typealiases  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -104,26 +104,19 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Protocols</h1>
-            <p>The following protocols are available globally.</p>
+            <h1>Typealiases</h1>
+            <p>The following typealiases are available globally.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/AMNotificationCenter%20Protocols"></a>
-                <a name="//apple_ref/swift/Section/AMNotificationCenter Protocols" class="dashAnchor"></a>
-                <a href="#/AMNotificationCenter%20Protocols">
-                  <h3 class="section-name">AMNotificationCenter Protocols</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P11AMCoreAudio7AMEvent"></a>
-                    <a name="//apple_ref/swift/Protocol/AMEvent" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11AMCoreAudio7AMEvent">AMEvent</a>
+                    <a name="/s:11AMCoreAudio10StereoPair"></a>
+                    <a name="//apple_ref/swift/Alias/StereoPair" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10StereoPair">StereoPair</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -131,48 +124,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The protocol that any events must implement.</p>
-
-<p>An event conforming to this protocol may be a class, a struct or an enum. In AMCoreAudio, 
-we will be relying on enums, since they are very lightweight yet expressive enough (we can
-pass arguments to them.)</p>
+                        <p>Represents a pair of stereo channel numbers.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AMEvent</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:P11AMCoreAudio17AMEventSubscriber"></a>
-                    <a name="//apple_ref/swift/Protocol/AMEventSubscriber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11AMCoreAudio17AMEventSubscriber">AMEventSubscriber</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The protocol any event subscriber must implement.</p>
-
-<p>Typically, this will be a class that also happens to conform to the <code>Hashable</code> protocol.</p>
-
-                        <a href="Protocols/AMEventSubscriber.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AMEventSubscriber</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StereoPair</span> <span class="o">=</span> <span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
