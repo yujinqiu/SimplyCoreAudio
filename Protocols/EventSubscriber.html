@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Direction Enum Reference</title>
+    <title>EventSubscriber Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/Direction" class="dashAnchor"></a>
-    <a title="Direction Enum Reference"></a>
+    <a name="//apple_ref/swift/Protocol/EventSubscriber" class="dashAnchor"></a>
+    <a title="EventSubscriber Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">AMCoreAudio Docs</a> (98% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AMCoreAudio Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Direction Enum Reference
+        EventSubscriber Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -105,14 +105,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Direction</h1>
+            <h1>EventSubscriber</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Direction</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">EventSubscriber</span></code></pre>
 
                 </div>
               </div>
-            <p>Indicates the direction used by an <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code> or <code><a href="../Classes/AudioStream.html">AudioStream</a></code>.</p>
+            <p>The protocol any event subscriber must implement.</p>
+
+<p>Typically, this will be a class that also happens to conform to the <code>Hashable</code> protocol.</p>
 
           </section>
           <section class="section task-group-section">
@@ -121,9 +123,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio9Direction7InvalidFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Invalid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio9Direction7InvalidFMS0_S0_">Invalid</a>
+                    <a name="/s:FP11AMCoreAudio15EventSubscriber13eventReceiverFPS_5Event_T_"></a>
+                    <a name="//apple_ref/swift/Method/eventReceiver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP11AMCoreAudio15EventSubscriber13eventReceiverFPS_5Event_T_">eventReceiver(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -131,30 +133,26 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invalid direction</p>
+                        <p>This is the event handler.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Invalid</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">eventReceiver</span><span class="p">(</span><span class="n">_</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P11AMCoreAudio5Event">Event</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio9Direction8PlaybackFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Playback" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio9Direction8PlaybackFMS0_S0_">Playback</a>
+                    <a name="/s:vP11AMCoreAudio15EventSubscriber9hashValueSi"></a>
+                    <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP11AMCoreAudio15EventSubscriber9hashValueSi">hashValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,45 +160,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Playback direction</p>
+                        <p>The hash value.
+- SeeAlso: The <code>Hashable</code> protocol.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Playback</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FO11AMCoreAudio9Direction9RecordingFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Recording" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio9Direction9RecordingFMS0_S0_">Recording</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Recording direction</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Recording</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>

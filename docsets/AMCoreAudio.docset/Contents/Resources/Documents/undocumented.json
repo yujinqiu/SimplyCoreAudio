@@ -1,23 +1,23 @@
 {
   "warnings": [
     {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioDevice.swift",
-      "line": 1110,
-      "symbol": "AMAudioDevice.virtualMasterBalance(direction:)",
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
+      "line": 1116,
+      "symbol": "AudioDevice.virtualMasterBalance(direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioDevice.swift",
-      "line": 1119,
-      "symbol": "AMAudioDevice.setVirtualMasterBalance(_:direction:)",
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
+      "line": 1125,
+      "symbol": "AudioDevice.setVirtualMasterBalance(_:direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioStream.swift",
-      "line": 338,
-      "symbol": "AMAudioStream.lookupByID(_:)",
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioStream.swift",
+      "line": 345,
+      "symbol": "AudioStream.lookupByID(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }

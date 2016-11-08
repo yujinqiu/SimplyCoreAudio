@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>BundleInfo Class Reference</title>
+    <title>AudioObject Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/BundleInfo" class="dashAnchor"></a>
-    <a title="BundleInfo Class Reference"></a>
+    <a name="//apple_ref/swift/Class/AudioObject" class="dashAnchor"></a>
+    <a title="AudioObject Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">AMCoreAudio Docs</a> (98% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AMCoreAudio Reference</a>
         <img id="carat" src="../img/carat.png" />
-        BundleInfo Class Reference
+        AudioObject Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -105,16 +105,18 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>BundleInfo</h1>
+            <h1>AudioObject</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">BundleInfo</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioObject</span></code></pre>
 
                 </div>
               </div>
-            <p><code>BundleInfo</code></p>
+            <p><code>AudioObject</code></p>
 
-<p>This class provides information about this bundle such as: the build date, name, version or builder number.</p>
+<p>This class represents a Core Audio object currently present in the system. In Core Audio, 
+audio objects are referenced by its <code>AudioObjectID</code> and belong to a specific <code>AudioClassID</code>. 
+For more information, please refer to Core Audio&rsquo;s documentation or source code.</p>
 
           </section>
           <section class="section task-group-section">
@@ -123,9 +125,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvC11AMCoreAudio10BundleInfo9buildDateGSqSS_"></a>
-                    <a name="//apple_ref/swift/Variable/buildDate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvC11AMCoreAudio10BundleInfo9buildDateGSqSS_">buildDate</a>
+                    <a name="/s:vC11AMCoreAudio11AudioObject7classIDGSqVs6UInt32_"></a>
+                    <a name="//apple_ref/swift/Property/classID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AMCoreAudio11AudioObject7classIDGSqVs6UInt32_">classID</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,16 +135,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns this bundle&rsquo;s build date</p>
+                        <p>The <code>AudioClassID</code> that identifies the class of this audio object.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <em>(optional)</em> An <code>AudioClassID</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">buildDate</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="n">thisBundle</span><span class="o">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">"BuildDate"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">classID</span><span class="p">:</span> <span class="kt">AudioClassID</span><span class="p">?</span> <span class="o">=</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>AudioClassID</code>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -150,9 +163,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvC11AMCoreAudio10BundleInfo4nameGSqSS_"></a>
-                    <a name="//apple_ref/swift/Variable/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvC11AMCoreAudio10BundleInfo4nameGSqSS_">name</a>
+                    <a name="/s:vC11AMCoreAudio11AudioObject12owningObjectGSqS0__"></a>
+                    <a name="//apple_ref/swift/Property/owningObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AMCoreAudio11AudioObject12owningObjectGSqS0__">owningObject</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,16 +173,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns this bundle&rsquo;s name</p>
+                        <p>The audio object that owns this audio object.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <em>(optional)</em> An <code>AudioObject</code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="n">thisBundle</span><span class="o">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">"CFBundleName"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">owningObject</span><span class="p">:</span> <span class="kt">AudioObject</span><span class="p">?</span> <span class="o">=</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code>AudioObject</code>.</p>
+
                       </div>
                     </section>
                   </div>
@@ -177,9 +201,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvC11AMCoreAudio10BundleInfo7versionGSqSS_"></a>
-                    <a name="//apple_ref/swift/Variable/version" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvC11AMCoreAudio10BundleInfo7versionGSqSS_">version</a>
+                    <a name="/s:vC11AMCoreAudio11AudioObject12owningDeviceGSqCS_11AudioDevice_"></a>
+                    <a name="//apple_ref/swift/Property/owningDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AMCoreAudio11AudioObject12owningDeviceGSqCS_11AudioDevice_">owningDevice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,26 +211,41 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns this bundle&rsquo;s version</p>
+                        <p>The audio device that owns this audio object.</p>
+
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <em>(optional)</em> An <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="n">thisBundle</span><span class="o">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">"CFBundleShortVersionString"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">owningDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">?</span> <span class="o">=</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>.</p>
+
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvC11AMCoreAudio10BundleInfo11buildNumberGSqSS_"></a>
-                    <a name="//apple_ref/swift/Variable/buildNumber" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvC11AMCoreAudio10BundleInfo11buildNumberGSqSS_">buildNumber</a>
+                    <a name="/s:vC11AMCoreAudio11AudioObject9hashValueSi"></a>
+                    <a name="//apple_ref/swift/Property/hashValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AMCoreAudio11AudioObject9hashValueSi">hashValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,41 +253,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns this bundle&rsquo;s build number</p>
+                        <p>The hash value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">buildNumber</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="n">thisBundle</span><span class="o">.</span><span class="n">infoDictionary</span><span class="p">?[</span><span class="s">"CFBundleVersion"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:ZFC11AMCoreAudio10BundleInfo9buildInfoFT_GSqSS_"></a>
-                    <a name="//apple_ref/swift/Method/buildInfo()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC11AMCoreAudio10BundleInfo9buildInfoFT_GSqSS_">buildInfo()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns this bundle&rsquo;s build information</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">buildInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hashValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>

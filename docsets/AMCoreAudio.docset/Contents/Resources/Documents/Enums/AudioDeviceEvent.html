@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TransportType Enum Reference</title>
+    <title>AudioDeviceEvent Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/TransportType" class="dashAnchor"></a>
-    <a title="TransportType Enum Reference"></a>
+    <a name="//apple_ref/swift/Enum/AudioDeviceEvent" class="dashAnchor"></a>
+    <a title="AudioDeviceEvent Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">AMCoreAudio Docs</a> (98% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AMCoreAudio Reference</a>
         <img id="carat" src="../img/carat.png" />
-        TransportType Enum Reference
+        AudioDeviceEvent Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -105,14 +105,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>TransportType</h1>
+            <h1>AudioDeviceEvent</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TransportType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AudioDeviceEvent</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P11AMCoreAudio5Event">Event</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Indicates the transport type used by an <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>.</p>
+            <p>// <code>AudioDeviceEvent</code> enum</p>
 
           </section>
           <section class="section task-group-section">
@@ -121,9 +121,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType7UnknownFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Unknown" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType7UnknownFMS0_S0_">Unknown</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent26nominalSampleRateDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/nominalSampleRateDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent26nominalSampleRateDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">nominalSampleRateDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -131,14 +131,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Unknown Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s sample rate changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Unknown</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">nominalSampleRateDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -152,9 +152,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType7BuiltInFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/BuiltIn" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType7BuiltInFMS0_S0_">BuiltIn</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent36availableNominalSampleRatesDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/availableNominalSampleRatesDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent36availableNominalSampleRatesDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">availableNominalSampleRatesDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,14 +162,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Built-In Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s list of nominal sample rates changes.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will typically happen on <em>Aggregate</em> and <em>Multi-Output</em> devices when adding or removing other audio devices (either physical or virtual.)
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">BuiltIn</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">availableNominalSampleRatesDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -183,9 +189,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType9AggregateFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Aggregate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType9AggregateFMS0_S0_">Aggregate</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent20clockSourceDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_"></a>
+                    <a name="//apple_ref/swift/Element/clockSourceDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent20clockSourceDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_">clockSourceDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,14 +199,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Aggregate Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s clock source changes for a given channel and direction.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Aggregate</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">clockSourceDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -214,9 +220,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType7VirtualFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Virtual" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType7VirtualFMS0_S0_">Virtual</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent13nameDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/nameDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent13nameDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">nameDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -224,14 +230,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Virtual Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s name changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Virtual</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">nameDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -245,9 +251,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType3PCIFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/PCI" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType3PCIFMS0_S0_">PCI</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent13listDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/listDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent13listDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">listDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -255,14 +261,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>PCI Transport Type</p>
+                        <p>Called whenever the list of owned audio devices on this audio device changes.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This will typically happen on <em>Aggregate</em> and <em>Multi-Output</em> devices when adding or removing other audio devices (either physical or virtual.)
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">PCI</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">listDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -276,9 +288,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType3USBFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/USB" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType3USBFMS0_S0_">USB</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent15volumeDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_"></a>
+                    <a name="//apple_ref/swift/Element/volumeDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent15volumeDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_">volumeDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -286,14 +298,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>USB Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s volume for a given channel and direction changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">USB</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">volumeDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -307,9 +319,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType8FireWireFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/FireWire" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType8FireWireFMS0_S0_">FireWire</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent13muteDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_"></a>
+                    <a name="//apple_ref/swift/Element/muteDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent13muteDidChangeFMS0_FT11audioDeviceCS_11AudioDevice7channelVs6UInt329directionOS_9Direction_S0_">muteDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -317,14 +329,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>FireWire Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s mute state for a given channel and direction changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">FireWire</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">muteDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span><span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -338,9 +350,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType9BluetoothFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Bluetooth" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType9BluetoothFMS0_S0_">Bluetooth</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent16isAliveDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isAliveDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent16isAliveDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">isAliveDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -348,14 +360,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Bluetooth Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s <em>is alive</em> property changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Bluetooth</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">isAliveDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -369,9 +381,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType11BluetoothLEFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/BluetoothLE" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType11BluetoothLEFMS0_S0_">BluetoothLE</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent18isRunningDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isRunningDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent18isRunningDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">isRunningDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,14 +391,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Bluetooth LE Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s <em>is running</em> property changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">BluetoothLE</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">isRunningDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -400,9 +412,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType4HDMIFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/HDMI" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType4HDMIFMS0_S0_">HDMI</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent27isRunningSomewhereDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isRunningSomewhereDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent27isRunningSomewhereDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">isRunningSomewhereDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -410,14 +422,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>HDMI Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s <em>is running somewhere</em> property changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">HDMI</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">isRunningSomewhereDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -431,9 +443,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType11DisplayPortFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/DisplayPort" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType11DisplayPortFMS0_S0_">DisplayPort</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent24isJackConnectedDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/isJackConnectedDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent24isJackConnectedDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">isJackConnectedDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -441,14 +453,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>DisplayPort Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s <em>is jack connected</em> property changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">DisplayPort</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">isJackConnectedDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -462,9 +474,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType7AirPlayFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/AirPlay" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType7AirPlayFMS0_S0_">AirPlay</a>
+                    <a name="/s:FO11AMCoreAudio16AudioDeviceEvent35preferredChannelsForStereoDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_"></a>
+                    <a name="//apple_ref/swift/Element/preferredChannelsForStereoDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO11AMCoreAudio16AudioDeviceEvent35preferredChannelsForStereoDidChangeFMS0_FT11audioDeviceCS_11AudioDevice_S0_">preferredChannelsForStereoDidChange</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -472,76 +484,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>AirPlay Transport Type</p>
+                        <p>Called whenever the audio device&rsquo;s <em>preferred channels for stereo</em> property changes.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">AirPlay</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType3AVBFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/AVB" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType3AVBFMS0_S0_">AVB</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Audio Video Bridging (AVB) Transport Type</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">AVB</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FO11AMCoreAudio13TransportType11ThunderboltFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/Thunderbolt" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO11AMCoreAudio13TransportType11ThunderboltFMS0_S0_">Thunderbolt</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Thunderbolt Transport Type</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">Thunderbolt</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">preferredChannelsForStereoDidChange</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

@@ -30,22 +30,22 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/AMAudioDevice.html">AMAudioDevice</a>
+                <a href="Classes/AudioDevice.html">AudioDevice</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AMAudioHardware.html">AMAudioHardware</a>
+                <a href="Classes/AudioHardware.html">AudioHardware</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AMAudioObject.html">AMAudioObject</a>
+                <a href="Classes/AudioObject.html">AudioObject</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/AMAudioStream.html">AMAudioStream</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/AMNotificationCenter.html">AMNotificationCenter</a>
+                <a href="Classes/AudioStream.html">AudioStream</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/BundleInfo.html">BundleInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NotificationCenter.html">NotificationCenter</a>
               </li>
             </ul>
           </li>
@@ -53,13 +53,13 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/AMAudioDeviceEvent.html">AMAudioDeviceEvent</a>
+                <a href="Enums/AudioDeviceEvent.html">AudioDeviceEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/AMAudioHardwareEvent.html">AMAudioHardwareEvent</a>
+                <a href="Enums/AudioHardwareEvent.html">AudioHardwareEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/AMAudioStreamEvent.html">AMAudioStreamEvent</a>
+                <a href="Enums/AudioStreamEvent.html">AudioStreamEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/Direction.html">Direction</a>
@@ -76,10 +76,10 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols.html#/s:P11AMCoreAudio7AMEvent">AMEvent</a>
+                <a href="Protocols.html#/s:P11AMCoreAudio5Event">Event</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/AMEventSubscriber.html">AMEventSubscriber</a>
+                <a href="Protocols/EventSubscriber.html">EventSubscriber</a>
               </li>
             </ul>
           </li>
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C11AMCoreAudio13AMAudioDevice"></a>
-                    <a name="//apple_ref/swift/Class/AMAudioDevice" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C11AMCoreAudio13AMAudioDevice">AMAudioDevice</a>
+                    <a name="/s:C11AMCoreAudio11AudioDevice"></a>
+                    <a name="//apple_ref/swift/Class/AudioDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11AMCoreAudio11AudioDevice">AudioDevice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,19 +158,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>AMAudioDevice</code></p>
+                        <p><code>AudioDevice</code></p>
 
 <p>This class represents an audio device in the system and allows subscribing to audio device notifications.</p>
 
 <p>Devices may be physical or virtual. For a comprehensive list of supported types, please refer to <code><a href="Enums/TransportType.html">TransportType</a></code>.</p>
 
-                        <a href="Classes/AMAudioDevice.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioDevice.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMAudioDevice</span><span class="p">:</span> <span class="kt"><a href="Classes/AMAudioObject.html">AMAudioObject</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioDevice</span><span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -184,9 +184,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C11AMCoreAudio15AMAudioHardware"></a>
-                    <a name="//apple_ref/swift/Class/AMAudioHardware" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C11AMCoreAudio15AMAudioHardware">AMAudioHardware</a>
+                    <a name="/s:C11AMCoreAudio13AudioHardware"></a>
+                    <a name="//apple_ref/swift/Class/AudioHardware" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11AMCoreAudio13AudioHardware">AudioHardware</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,19 +194,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>AMAudioHardware</code></p>
+                        <p><code>AudioHardware</code></p>
 
 <p>This class allows subscribing to hardware-related audio notifications.</p>
 
-<p>For a comprehensive list of supported notifications, see <code>AMAudioHardwareDelegate</code>.</p>
+<p>For a comprehensive list of supported notifications, see <code>AudioHardwareDelegate</code>.</p>
 
-                        <a href="Classes/AMAudioHardware.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioHardware.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMAudioHardware</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioHardware</span></code></pre>
 
                         </div>
                       </div>
@@ -220,9 +220,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C11AMCoreAudio13AMAudioStream"></a>
-                    <a name="//apple_ref/swift/Class/AMAudioStream" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C11AMCoreAudio13AMAudioStream">AMAudioStream</a>
+                    <a name="/s:C11AMCoreAudio11AudioStream"></a>
+                    <a name="//apple_ref/swift/Class/AudioStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11AMCoreAudio11AudioStream">AudioStream</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -230,17 +230,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>AMAudioStream</code></p>
+                        <p><code>AudioStream</code></p>
 
 <p>This class represents an audio stream belonging to an audio object.</p>
 
-                        <a href="Classes/AMAudioStream.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioStream.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMAudioStream</span><span class="p">:</span> <span class="kt"><a href="Classes/AMAudioObject.html">AMAudioObject</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span><span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -261,9 +261,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C11AMCoreAudio20AMNotificationCenter"></a>
-                    <a name="//apple_ref/swift/Class/AMNotificationCenter" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C11AMCoreAudio20AMNotificationCenter">AMNotificationCenter</a>
+                    <a name="/s:C11AMCoreAudio18NotificationCenter"></a>
+                    <a name="//apple_ref/swift/Class/NotificationCenter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11AMCoreAudio18NotificationCenter">NotificationCenter</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,15 +271,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>AMNotificationCenter</code> is AMCoreAudio&rsquo;s de facto pub-sub system.</p>
+                        <p><code>NotificationCenter</code> is AMCoreAudio&rsquo;s de facto pub-sub system.</p>
 
-                        <a href="Classes/AMNotificationCenter.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/NotificationCenter.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMNotificationCenter</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">NotificationCenter</span></code></pre>
 
                         </div>
                       </div>
@@ -293,9 +293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C11AMCoreAudio13AMAudioObject"></a>
-                    <a name="//apple_ref/swift/Class/AMAudioObject" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C11AMCoreAudio13AMAudioObject">AMAudioObject</a>
+                    <a name="/s:C11AMCoreAudio11AudioObject"></a>
+                    <a name="//apple_ref/swift/Class/AudioObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C11AMCoreAudio11AudioObject">AudioObject</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -303,19 +303,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>AMAudioObject</code></p>
+                        <p><code>AudioObject</code></p>
 
 <p>This class represents a Core Audio object currently present in the system. In Core Audio, 
 audio objects are referenced by its <code>AudioObjectID</code> and belong to a specific <code>AudioClassID</code>. 
 For more information, please refer to Core Audio&rsquo;s documentation or source code.</p>
 
-                        <a href="Classes/AMAudioObject.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/AudioObject.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMAudioObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioObject</span></code></pre>
 
                         </div>
                       </div>
