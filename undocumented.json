@@ -15,58 +15,9 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioObject.swift",
-      "line": 386,
-      "symbol": "==(_:_:)",
-      "symbol_kind": "source.lang.swift.decl.function.free",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AMAudioStream.swift",
       "line": 338,
       "symbol": "AMAudioStream.lookupByID(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 11,
-      "symbol": "BundleInfo",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 16,
-      "symbol": "BundleInfo.buildDate",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 17,
-      "symbol": "BundleInfo.name",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 18,
-      "symbol": "BundleInfo.version",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 19,
-      "symbol": "BundleInfo.buildNumber",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/BundleInfo.swift",
-      "line": 21,
-      "symbol": "BundleInfo.buildInfo()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }
