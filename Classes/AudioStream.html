@@ -531,14 +531,20 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns an <code>AudioStream</code> by providing a valid audio stream identifier.</p>
+
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If identifier is not valid, <code>nil</code> will be returned.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioObject.html">AudioObject</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">by</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">AudioObjectID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AudioStream</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>

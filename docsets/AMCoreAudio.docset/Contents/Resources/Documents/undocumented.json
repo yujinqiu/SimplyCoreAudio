@@ -2,23 +2,16 @@
   "warnings": [
     {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1256,
+      "line": 1254,
       "symbol": "AudioDevice.virtualMasterBalance(direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1266,
+      "line": 1264,
       "symbol": "AudioDevice.setVirtualMasterBalance(_:direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioStream.swift",
-      "line": 401,
-      "symbol": "AudioStream.lookup(by:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }
   ],
