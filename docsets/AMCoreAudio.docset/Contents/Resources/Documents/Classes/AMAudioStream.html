@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AudioStream Class Reference</title>
+    <title>AMAudioStream Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,19 +10,18 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/AudioStream" class="dashAnchor"></a>
-    <a title="AudioStream Class Reference"></a>
+    <a name="//apple_ref/swift/Class/AMAudioStream" class="dashAnchor"></a>
+    <a title="AMAudioStream Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AMCoreAudio Docs</a> (98% documented)</p>
-        <p class="header-right"><a href="https://github.com/rnine/AMCoreAudio"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p><a href="../index.html">AMCoreAudio Docs</a> (95% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">AMCoreAudio Reference</a>
         <img id="carat" src="../img/carat.png" />
-        AudioStream Class Reference
+        AMAudioStream Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -32,22 +31,22 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/AudioDevice.html">AudioDevice</a>
+                <a href="../Classes/AMAudioDevice.html">AMAudioDevice</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AudioHardware.html">AudioHardware</a>
+                <a href="../Classes/AMAudioHardware.html">AMAudioHardware</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AudioObject.html">AudioObject</a>
+                <a href="../Classes/AMAudioObject.html">AMAudioObject</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/AudioStream.html">AudioStream</a>
+                <a href="../Classes/AMAudioStream.html">AMAudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AMNotificationCenter.html">AMNotificationCenter</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/BundleInfo.html">BundleInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NotificationCenter.html">NotificationCenter</a>
               </li>
             </ul>
           </li>
@@ -55,19 +54,16 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/AudioDeviceEvent.html">AudioDeviceEvent</a>
+                <a href="../Enums/AMAudioDeviceEvent.html">AMAudioDeviceEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AudioHardwareEvent.html">AudioHardwareEvent</a>
+                <a href="../Enums/AMAudioHardwareEvent.html">AMAudioHardwareEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AudioStreamEvent.html">AudioStreamEvent</a>
+                <a href="../Enums/AMAudioStreamEvent.html">AMAudioStreamEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/Direction.html">Direction</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/TerminalType.html">TerminalType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TransportType.html">TransportType</a>
@@ -78,10 +74,10 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols.html#/s:P11AMCoreAudio5Event">Event</a>
+                <a href="../Protocols.html#/s:P11AMCoreAudio7AMEvent">AMEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/EventSubscriber.html">EventSubscriber</a>
+                <a href="../Protocols/AMEventSubscriber.html">AMEventSubscriber</a>
               </li>
             </ul>
           </li>
@@ -93,27 +89,19 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="../Typealiases.html">Typealiases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:11AMCoreAudio10StereoPair">StereoPair</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>AudioStream</h1>
+            <h1>AMAudioStream</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioObject.html">AudioObject</a></span></code></pre>
+                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AMAudioStream</span><span class="p">:</span> <span class="kt"><a href="../Classes/AMAudioObject.html">AMAudioObject</a></span></code></pre>
 
                 </div>
               </div>
-            <p><code>AudioStream</code></p>
+            <p><code>AMAudioStream</code></p>
 
 <p>This class represents an audio stream belonging to an audio object.</p>
 
@@ -131,9 +119,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream2idVs6UInt32"></a>
-                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream2idVs6UInt32">id</a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream8streamIDVs6UInt32"></a>
+                    <a name="//apple_ref/swift/Property/streamID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream8streamIDVs6UInt32">streamID</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -154,7 +142,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">AudioObjectID</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">streamID</span><span class="p">:</span> <span class="kt">AudioObjectID</span></code></pre>
 
                         </div>
                       </div>
@@ -169,9 +157,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream6activeSb"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream6activeSb"></a>
                     <a name="//apple_ref/swift/Property/active" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream6activeSb">active</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream6activeSb">active</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -207,9 +195,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream15startingChannelGSqVs6UInt32_"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream15startingChannelGSqVs6UInt32_"></a>
                     <a name="//apple_ref/swift/Property/startingChannel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream15startingChannelGSqVs6UInt32_">startingChannel</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream15startingChannelGSqVs6UInt32_">startingChannel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,40 +233,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream12terminalTypeOS_12TerminalType"></a>
-                    <a name="//apple_ref/swift/Property/terminalType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream12terminalTypeOS_12TerminalType">terminalType</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Describes the general kind of functionality attached to this stream.</p>
-
-<ul>
-<li>Return: A <code><a href="../Enums/TerminalType.html">TerminalType</a></code>.</li>
-</ul>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">terminalType</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalType.html">TerminalType</a></span> <span class="o">=</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream9directionGSqOS_9Direction_"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream9directionGSqOS_9Direction_"></a>
                     <a name="//apple_ref/swift/Property/direction" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream9directionGSqOS_9Direction_">direction</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream9directionGSqOS_9Direction_">direction</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -288,8 +245,8 @@
                       <div class="abstract">
                         <p>The audio stream&rsquo;s direction.</p>
 
-<p>For output streams, and to continue using the same <code><a href="../Enums/Direction.html">Direction</a></code> concept used by <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>,
-this will be <code>Direction.Playback</code>, likewise, for input streams, <code>Direction.Recording</code> will be returned.</p>
+<p>For output streams, and to continue using the same <code><a href="../Enums/Direction.html">Direction</a></code> concept used by <code><a href="../Classes/AMAudioDevice.html">AMAudioDevice</a></code>,
+this will be <code><a href="../Enums/Direction.html#/s:FO11AMCoreAudio9Direction8PlaybackFMS0_S0_">Direction.Playback</a></code>, likewise, for input streams, <code><a href="../Enums/Direction.html#/s:FO11AMCoreAudio9Direction9RecordingFMS0_S0_">Direction.Recording</a></code> will be returned.</p>
 
 <div class="aside aside-returns">
     <p class="aside-title">Returns</p>
@@ -317,9 +274,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_"></a>
                     <a name="//apple_ref/swift/Property/physicalFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_">physicalFormat</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_">physicalFormat</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -331,7 +288,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_">virtualFormat</a></code></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:vC11AMCoreAudio13AMAudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_">virtualFormat</a></code></p>
 
 </div>
 
@@ -361,9 +318,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_"></a>
                     <a name="//apple_ref/swift/Property/virtualFormat" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_">virtualFormat</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_">virtualFormat</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,7 +332,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_">physicalFormat</a></code></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:vC11AMCoreAudio13AMAudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_">physicalFormat</a></code></p>
 
 </div>
 
@@ -405,9 +362,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__"></a>
                     <a name="//apple_ref/swift/Property/availablePhysicalFormats" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__">availablePhysicalFormats</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__">availablePhysicalFormats</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -419,7 +376,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__">availableVirtualFormats</a></code></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:vC11AMCoreAudio13AMAudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__">availableVirtualFormats</a></code></p>
 
 </div>
 
@@ -449,9 +406,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__"></a>
+                    <a name="/s:vC11AMCoreAudio13AMAudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__"></a>
                     <a name="//apple_ref/swift/Property/availableVirtualFormats" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__">availableVirtualFormats</a>
+                    <a class="token" href="#/s:vC11AMCoreAudio13AMAudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__">availableVirtualFormats</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -463,7 +420,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__">availablePhysicalFormats</a></code></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:vC11AMCoreAudio13AMAudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__">availablePhysicalFormats</a></code></p>
 
 </div>
 
@@ -504,36 +461,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC11AMCoreAudio11AudioStream10lookupByIDFVs6UInt32GSqS0__"></a>
-                    <a name="//apple_ref/swift/Method/lookupByID(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC11AMCoreAudio11AudioStream10lookupByIDFVs6UInt32GSqS0__">lookupByID(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioObject.html">AudioObject</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC11AMCoreAudio11AudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__"></a>
+                    <a name="/s:FC11AMCoreAudio13AMAudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__"></a>
                     <a name="//apple_ref/swift/Method/availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11AMCoreAudio11AudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a>
+                    <a class="token" href="#/s:FC11AMCoreAudio13AMAudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -557,7 +487,7 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
 </ul></li>
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:FC11AMCoreAudio13AMAudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
 
 <p></div>
 <div class="aside aside-returns">
@@ -606,47 +536,9 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream4nameGSqSS_"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream4nameGSqSS_">name</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The audio stream&rsquo;s name as reported by the system.</p>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <em>(optional)</em> An audio stream&rsquo;s name.
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>An audio stream’s name.</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC11AMCoreAudio11AudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__"></a>
+                    <a name="/s:FC11AMCoreAudio13AMAudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__"></a>
                     <a name="//apple_ref/swift/Method/availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11AMCoreAudio11AudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a>
+                    <a class="token" href="#/s:FC11AMCoreAudio13AMAudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -670,7 +562,7 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
 </ul></li>
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
+    <p><code><a href="../Classes/AMAudioStream.html#/s:FC11AMCoreAudio13AMAudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
 
 <p></div>
 <div class="aside aside-returns">
@@ -718,41 +610,10 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                 </li>
               </ul>
             </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC11AMCoreAudio11AudioStream11descriptionSS"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11AMCoreAudio11AudioStream11descriptionSS">description</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a string describing this audio stream.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-12-20)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">Ruben Nine</a>. All rights reserved. (Last updated: 2016-10-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

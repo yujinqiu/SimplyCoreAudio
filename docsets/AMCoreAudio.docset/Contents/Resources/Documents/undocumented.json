@@ -1,26 +1,26 @@
 {
   "warnings": [
     {
-      "file": "/Users/ruben/src/apps/AudioMate/Carthage/Checkouts/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1117,
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
+      "line": 1256,
       "symbol": "AudioDevice.virtualMasterBalance(direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ruben/src/apps/AudioMate/Carthage/Checkouts/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1126,
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
+      "line": 1266,
       "symbol": "AudioDevice.setVirtualMasterBalance(_:direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/ruben/src/apps/AudioMate/Carthage/Checkouts/AMCoreAudio/AMCoreAudio/AudioStream.swift",
-      "line": 347,
+      "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioStream.swift",
+      "line": 401,
       "symbol": "AudioStream.lookupByID(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/ruben/src/apps/AudioMate/Carthage/Checkouts/AMCoreAudio"
+  "source_directory": "/Users/ruben/src/frameworks/AMCoreAudio"
 }
