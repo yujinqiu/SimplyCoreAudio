@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -21,6 +24,12 @@
           AMCoreAudio Docs
         </a>
          (98% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -127,7 +136,7 @@
 
                 </div>
               </div>
-            <p>This is <code>AMCoreAudio</code>&rsquo;s de facto pub-sub system.</p>
+            <p>This is <code>AMCoreAudio</code>&lsquo;s de facto pub-sub system.</p>
 
           </div>
         </section>
@@ -179,24 +188,6 @@
                         <p>Allows a subscriber conforming to the <code><a href="../Protocols/EventSubscriber.html">EventSubscriber</a></code> protocol to receive events of
 the type specified by <code>eventType</code>.</p>
 
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter subscriber: Any object conforming to the <code><a href="../Protocols/EventSubscriber.html">EventSubscriber</a></code> protocol.
-
-</div>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter eventType: A class, struct or enum type conforming to the <code><a href="../Protocols.html#/s:P11AMCoreAudio5Event">Event</a></code> protocol.
-
-</div>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter dispatchQueue: (optional) A dispatch queue to use for delivering the events.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -219,7 +210,6 @@ the type specified by <code>eventType</code>.</p>
                               <td>
                                 <div>
                                   <p>Any object conforming to the <code>EventSubscriber</code> protocol.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -232,7 +222,6 @@ the type specified by <code>eventType</code>.</p>
                               <td>
                                 <div>
                                   <p>A class, struct or enum type conforming to the <code>Event</code> protocol.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -245,7 +234,6 @@ the type specified by <code>eventType</code>.</p>
                               <td>
                                 <div>
                                   <p>(optional) A dispatch queue to use for delivering the events.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -270,18 +258,6 @@ the type specified by <code>eventType</code>.</p>
                       <div class="abstract">
                         <p>Removes a subscriber from the subscription to events of a specified <code>eventType</code>.</p>
 
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter subscriber: Any object conforming to the <code><a href="../Protocols/EventSubscriber.html">EventSubscriber</a></code> protocol.
-
-</div>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter eventType: A class, struct or enum type conforming to the <code><a href="../Protocols.html#/s:P11AMCoreAudio5Event">Event</a></code> protocol.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -304,7 +280,6 @@ the type specified by <code>eventType</code>.</p>
                               <td>
                                 <div>
                                   <p>Any object conforming to the <code>EventSubscriber</code> protocol.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -317,7 +292,6 @@ the type specified by <code>eventType</code>.</p>
                               <td>
                                 <div>
                                   <p>A class, struct or enum type conforming to the <code>Event</code> protocol.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -335,8 +309,8 @@ the type specified by <code>eventType</code>.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2017-03-13)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2017-09-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

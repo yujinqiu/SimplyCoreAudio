@@ -2,14 +2,14 @@
   "warnings": [
     {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1263,
+      "line": 1261,
       "symbol": "AudioDevice.virtualMasterBalance(direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ruben/src/frameworks/AMCoreAudio/AMCoreAudio/AudioDevice.swift",
-      "line": 1273,
+      "line": 1271,
       "symbol": "AudioDevice.setVirtualMasterBalance(_:direction:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

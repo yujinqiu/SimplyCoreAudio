@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
 
@@ -21,6 +24,12 @@
           AMCoreAudio Docs
         </a>
          (98% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
       </p>
     
         <p class="header-col header-col--secondary">
@@ -160,12 +169,6 @@
                       <div class="abstract">
                         <p>This audio stream&rsquo;s identifier.</p>
 
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    An <code>AudioObjectID</code>.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -178,7 +181,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>An <code>AudioObjectID</code>.</p>
-
                       </div>
                     </section>
                   </div>
@@ -198,12 +200,6 @@
                       <div class="abstract">
                         <p>Returns whether this audio stream is enabled and doing I/O.</p>
 
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <code>true</code> when enabled, <code>false</code> otherwise.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -216,7 +212,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p><code>true</code> when enabled, <code>false</code> otherwise.</p>
-
                       </div>
                     </section>
                   </div>
@@ -236,12 +231,6 @@
                       <div class="abstract">
                         <p>Specifies the first element in the owning device that corresponds to the element one of this stream.</p>
 
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <em>(optional)</em> A <code>UInt32</code>.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -253,8 +242,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A <code>UInt32</code>.</p>
-
+                        <p><em>(optional)</em> A <code>UInt32</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -308,12 +296,6 @@
 <p>For output streams, and to continue using the same <code><a href="../Enums/Direction.html">Direction</a></code> concept used by <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>,
 this will be <code>Direction.Playback</code>, likewise, for input streams, <code>Direction.Recording</code> will be returned.</p>
 
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <em>(optional)</em> A <code><a href="../Enums/Direction.html">Direction</a></code>.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -325,8 +307,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A <code><a href="../Enums/Direction.html">Direction</a></code>.</p>
-
+                        <p><em>(optional)</em> A <code><a href="../Enums/Direction.html">Direction</a></code>.</p>
                       </div>
                     </section>
                   </div>
@@ -345,16 +326,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An <code>AudioStreamBasicDescription</code> that describes the current data format for this audio stream.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream13virtualFormatGSqVSC27AudioStreamBasicDescription_">virtualFormat</a></code></p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An <code>AudioStreamBasicDescription</code>.</p>
 
 </div>
 
@@ -369,8 +343,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <code>AudioStreamBasicDescription</code>.</p>
-
+                        <p><em>(optional)</em> An <code>AudioStreamBasicDescription</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -389,16 +362,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An <code>AudioStreamBasicDescription</code> that describes the current virtual data format for this audio stream.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream14physicalFormatGSqVSC27AudioStreamBasicDescription_">physicalFormat</a></code></p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An <code>AudioStreamBasicDescription</code>.</p>
 
 </div>
 
@@ -413,8 +379,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <code>AudioStreamBasicDescription</code>.</p>
-
+                        <p><em>(optional)</em> An <code>AudioStreamBasicDescription</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -433,16 +398,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>All the available physical formats for this audio stream.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream23availableVirtualFormatsGSqGSaVSC28AudioStreamRangedDescription__">availableVirtualFormats</a></code></p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An array of <code>AudioStreamRangedDescription</code> structs.</p>
 
 </div>
 
@@ -457,8 +415,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An array of <code>AudioStreamRangedDescription</code> structs.</p>
-
+                        <p><em>(optional)</em> An array of <code>AudioStreamRangedDescription</code> structs.</p>
                       </div>
                     </section>
                   </div>
@@ -477,16 +434,9 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>All the available virtual formats for this audio stream.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/AudioStream.html#/s:vC11AMCoreAudio11AudioStream24availablePhysicalFormatsGSqGSaVSC28AudioStreamRangedDescription__">availablePhysicalFormats</a></code></p>
-
-</div>
-
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An array of <code>AudioStreamRangedDescription</code> structs.</p>
 
 </div>
 
@@ -501,8 +451,7 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An array of <code>AudioStreamRangedDescription</code> structs.</p>
-
+                        <p><em>(optional)</em> An array of <code>AudioStreamRangedDescription</code> structs.</p>
                       </div>
                     </section>
                   </div>
@@ -532,7 +481,6 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an <code>AudioStream</code> by providing a valid audio stream identifier.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     If identifier is not valid, <code>nil</code> will be returned.
@@ -565,29 +513,17 @@ this will be <code>Direction.Playback</code>, likewise, for input streams, <code
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>All the available physical formats for this audio stream matching the current physical format&rsquo;s sample rate.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>By default, both mixable and non-mixable streams are returned, however,  non-mixable
 streams can be filtered out by setting <code>includeNonMixable</code> to <code>false</code>.</p>
 
 </div>
-
-<p><li><p>Parameters:</p></p>
-
-<p><ul>
-<li>includeNonMixable: Whether to include non-mixable streams in the returned array. Defaults to <code>true</code>.</li>
-</ul></li>
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
+    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream55availableVirtualFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availableVirtualFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p>
 
-<p></div>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An array of <code>AudioStreamBasicDescription</code> structs.</p></p>
-
-<p></div></p>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -611,7 +547,6 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                               <td>
                                 <div>
                                   <p>Whether to include non-mixable streams in the returned array. Defaults to <code>true</code>.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -620,8 +555,7 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An array of <code>AudioStreamBasicDescription</code> structs.</p>
-
+                        <p><em>(optional)</em> An array of <code>AudioStreamBasicDescription</code> structs.</p>
                       </div>
                     </section>
                   </div>
@@ -641,12 +575,6 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                       <div class="abstract">
                         <p>The audio stream&rsquo;s name as reported by the system.</p>
 
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <em>(optional)</em> An audio stream&rsquo;s name.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -658,8 +586,7 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An audio stream’s name.</p>
-
+                        <p><em>(optional)</em> An audio stream&rsquo;s name.</p>
                       </div>
                     </section>
                   </div>
@@ -678,29 +605,17 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>All the available virtual formats for this audio stream matching the current virtual format&rsquo;s sample rate.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>By default, both mixable and non-mixable streams are returned, however,  non-mixable 
 streams can be filtered out by setting <code>includeNonMixable</code> to <code>false</code>.</p>
 
 </div>
-
-<p><li><p>Parameters:</p></p>
-
-<p><ul>
-<li>includeNonMixable: Whether to include non-mixable streams in the returned array. Defaults to <code>true</code>.</li>
-</ul></li>
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p></p>
+    <p><code><a href="../Classes/AudioStream.html#/s:FC11AMCoreAudio11AudioStream56availablePhysicalFormatsMatchingCurrentNominalSampleRateFSbGSqGSaVSC27AudioStreamBasicDescription__">availablePhysicalFormatsMatchingCurrentNominalSampleRate(_:)</a></code></p>
 
-<p></div>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    <p><em>(optional)</em> An array of <code>AudioStreamBasicDescription</code> structs.</p></p>
-
-<p></div></p>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -724,7 +639,6 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                               <td>
                                 <div>
                                   <p>Whether to include non-mixable streams in the returned array. Defaults to <code>true</code>.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -733,8 +647,7 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An array of <code>AudioStreamBasicDescription</code> structs.</p>
-
+                        <p><em>(optional)</em> An array of <code>AudioStreamBasicDescription</code> structs.</p>
                       </div>
                     </section>
                   </div>
@@ -785,8 +698,8 @@ streams can be filtered out by setting <code>includeNonMixable</code> to <code>f
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2017-03-13)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2017-09-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
