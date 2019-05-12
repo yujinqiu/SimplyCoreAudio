@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
 
     <a title="Classes  Reference"></a>
 
@@ -73,7 +74,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/AudioDeviceEvent.html">AudioDeviceEvent</a>
@@ -107,7 +108,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Structs.html">Structs</a>
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Structs.html#/s:11AMCoreAudio10VolumeInfoV">VolumeInfo</a>
@@ -115,7 +116,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Typealiases.html">Typealiases</a>
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a>
@@ -141,46 +142,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AMCoreAudio10BundleInfoC"></a>
-                    <a name="//apple_ref/swift/Class/BundleInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio10BundleInfoC">BundleInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This class provides information about this bundle such as: </p>
-<li>build date</li>
-<li>name</li>
-<div class="aside aside-version">
-    <p class="aside-title">Version</p>
-    version
-
-</div>
-<li>builder number</li>
-
-                        <a href="Classes/BundleInfo.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">BundleInfo</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:11AMCoreAudio0B6DeviceC"></a>
                     <a name="//apple_ref/swift/Class/AudioDevice" class="dashAnchor"></a>
                     <a class="token" href="#/s:11AMCoreAudio0B6DeviceC">AudioDevice</a>
@@ -201,7 +162,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioDevice</span><span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioDevice</span> <span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -235,7 +196,41 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioHardware</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioHardware</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6ObjectC"></a>
+                    <a name="//apple_ref/swift/Class/AudioObject" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6ObjectC">AudioObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class represents a Core Audio object currently present in the system. In Core Audio,
+audio objects are referenced by its <code>AudioObjectID</code> and belong to a specific <code>AudioClassID</code>. 
+For more information, please refer to Core Audio&rsquo;s documentation or source code.</p>
+
+                        <a href="Classes/AudioObject.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioObject</span></code></pre>
 
                         </div>
                       </div>
@@ -269,7 +264,47 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span><span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioStream</span> <span class="p">:</span> <span class="kt"><a href="Classes/AudioObject.html">AudioObject</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio10BundleInfoC"></a>
+                    <a name="//apple_ref/swift/Class/BundleInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10BundleInfoC">BundleInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class provides information about this bundle such as: </p>
+<li>build date</li>
+<li>name</li>
+<div class="aside aside-version">
+    <p class="aside-title">Version</p>
+    version
+
+</div>
+<li>builder number</li>
+
+                        <a href="Classes/BundleInfo.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">BundleInfo</span></code></pre>
 
                         </div>
                       </div>
@@ -308,41 +343,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">NotificationCenter</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:11AMCoreAudio0B6ObjectC"></a>
-                    <a name="//apple_ref/swift/Class/AudioObject" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio0B6ObjectC">AudioObject</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This class represents a Core Audio object currently present in the system. In Core Audio,
-audio objects are referenced by its <code>AudioObjectID</code> and belong to a specific <code>AudioClassID</code>. 
-For more information, please refer to Core Audio&rsquo;s documentation or source code.</p>
-
-                        <a href="Classes/AudioObject.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AudioObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">NotificationCenter</span></code></pre>
 
                         </div>
                       </div>
@@ -357,8 +358,8 @@ For more information, please refer to Core Audio&rsquo;s documentation or source
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2018 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2018-09-04)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2019-05-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
