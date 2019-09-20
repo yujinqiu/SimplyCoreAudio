@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AudioHardwareEvent Enumeration Reference</title>
+    <title>VolumeInfo Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Enum/AudioHardwareEvent" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/VolumeInfo" class="dashAnchor"></a>
 
-    <a title="AudioHardwareEvent Enumeration Reference"></a>
+    <a title="VolumeInfo Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">AMCoreAudio Reference</a>
       <img class="carat" src="../img/carat.png" />
-      AudioHardwareEvent Enumeration Reference
+      VolumeInfo Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -129,14 +129,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>AudioHardwareEvent</h1>
+            <h1>VolumeInfo</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AudioHardwareEvent</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:11AMCoreAudio5EventP">Event</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VolumeInfo</span></code></pre>
 
                 </div>
               </div>
-            <p>Represents an <code><a href="../Classes/AudioHardware.html">AudioHardware</a></code> event.</p>
+            <p>This struct holds volume, mute, and playthru information about a given channel and direction of an <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>.</p>
 
           </div>
         </section>
@@ -148,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AMCoreAudio0B13HardwareEventO17deviceListChangedyACSayAA0B6DeviceCG_AGtcACmF"></a>
-                    <a name="//apple_ref/swift/Element/deviceListChanged(addedDevices:removedDevices:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio0B13HardwareEventO17deviceListChangedyACSayAA0B6DeviceCG_AGtcACmF">deviceListChanged(addedDevices:removedDevices:)</a>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV6volumeSfSgvp"></a>
+                    <a name="//apple_ref/swift/Property/volume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV6volumeSfSgvp">volume</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,15 +158,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called whenever the list of hardware devices and device subdevices changes.
-(i.e., devices that are part of <em>Aggregate</em> or <em>Multi-Output</em> devices.)</p>
+                        <p>Returns an scalar volume, or <code>nil</code> if unavailable.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">deviceListChanged</span><span class="p">(</span><span class="nv">addedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">],</span> <span class="nv">removedDevices</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">volume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -176,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AMCoreAudio0B13HardwareEventO25defaultInputDeviceChangedyAcA0bG0C_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/defaultInputDeviceChanged(audioDevice:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio0B13HardwareEventO25defaultInputDeviceChangedyAcA0bG0C_tcACmF">defaultInputDeviceChanged(audioDevice:)</a>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV03hasC0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/hasVolume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV03hasC0Sbvp">hasVolume</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,14 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called whenever the default input device changes.</p>
+                        <p>Returns whether volume is present.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">defaultInputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasVolume</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -203,9 +202,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AMCoreAudio0B13HardwareEventO26defaultOutputDeviceChangedyAcA0bG0C_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/defaultOutputDeviceChanged(audioDevice:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio0B13HardwareEventO26defaultOutputDeviceChangedyAcA0bG0C_tcACmF">defaultOutputDeviceChanged(audioDevice:)</a>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV06canSetC0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/canSetVolume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV06canSetC0Sbvp">canSetVolume</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -213,14 +212,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called whenever the default output device changes.</p>
+                        <p>Returns whether volume can be set.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">defaultOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canSetVolume</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -230,9 +229,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11AMCoreAudio0B13HardwareEventO32defaultSystemOutputDeviceChangedyAcA0bH0C_tcACmF"></a>
-                    <a name="//apple_ref/swift/Element/defaultSystemOutputDeviceChanged(audioDevice:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11AMCoreAudio0B13HardwareEventO32defaultSystemOutputDeviceChangedyAcA0bH0C_tcACmF">defaultSystemOutputDeviceChanged(audioDevice:)</a>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV7canMuteSbvp"></a>
+                    <a name="//apple_ref/swift/Property/canMute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV7canMuteSbvp">canMute</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -240,14 +239,95 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called whenever the default system output device changes.</p>
+                        <p>Returns whether audio can be muted.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">defaultSystemOutputDeviceChanged</span><span class="p">(</span><span class="nv">audioDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/AudioDevice.html">AudioDevice</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canMute</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV7isMutedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isMuted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV7isMutedSbvp">isMuted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether audio is muted.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isMuted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV11canPlayThruSbvp"></a>
+                    <a name="//apple_ref/swift/Property/canPlayThru" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV11canPlayThruSbvp">canPlayThru</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether play thru is supported.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">canPlayThru</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio10VolumeInfoV13isPlayThruSetSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isPlayThruSet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio10VolumeInfoV13isPlayThruSetSbvp">isPlayThruSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether play thru is enabled.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isPlayThruSet</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
