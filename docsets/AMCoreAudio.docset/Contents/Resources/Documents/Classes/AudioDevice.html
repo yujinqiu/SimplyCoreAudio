@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AudioDevice Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/AudioDevice" class="dashAnchor"></a>
+
+    <a title="AudioDevice Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          AMCoreAudio 3.4 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/rnine/AMCoreAudio">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">AMCoreAudio Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      AudioDevice Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioDevice.html">AudioDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioHardware.html">AudioHardware</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioObject.html">AudioObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/AudioStream.html">AudioStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/BundleInfo.html">BundleInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NotificationCenter.html">NotificationCenter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AudioDeviceEvent.html">AudioDeviceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AudioHardwareEvent.html">AudioHardwareEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/AudioStreamEvent.html">AudioStreamEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/Direction.html">Direction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/TerminalType.html">TerminalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/TransportType.html">TransportType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/s:11AMCoreAudio5EventP">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/EventSubscriber.html">EventSubscriber</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/VolumeInfo.html">VolumeInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>AudioDevice</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">AudioDevice</span> <span class="p">:</span> <span class="kt"><a href="../Classes/AudioObject.html">AudioObject</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">AudioDevice</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                </div>
+              </div>
+            <p>This class represents an audio device in the system and allows subscribing to audio device notifications.</p>
+
+<p>Devices may be physical or virtual. For a comprehensive list of supported types, please refer to <code><a href="../Enums/TransportType.html">TransportType</a></code>.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Class%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Class Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Class%20Functions"></a>
+                  <h3 class="section-name"><p>Class Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC6lookup2byACSgs6UInt32V_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/lookup(by:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC6lookup2byACSgs6UInt32V_tFZ">lookup(by:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an <code>AudioDevice</code> by providing a valid audio device identifier.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If identifier is not valid, <code>nil</code> will be returned.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">by</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">AudioObjectID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An audio device identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC6lookup2byACSgSS_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/lookup(by:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC6lookup2byACSgSS_tFZ">lookup(by:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an <code>AudioDevice</code> by providing a valid audio device unique identifier.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>If unique identifier is not valid, <code>nil</code> will be returned.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lookup</span><span class="p">(</span><span class="n">by</span> <span class="nv">uid</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An audio device unique identifier.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC03allC3IDsSays6UInt32VGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/allDeviceIDs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC03allC3IDsSays6UInt32VGyFZ">allDeviceIDs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the audio device identifiers currently available in the system.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This list may also include <em>Aggregate</em> and <em>Multi-Output</em> devices.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">allDeviceIDs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioObjectID</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code>AudioObjectID</code> values.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC10allDevicesSayACGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/allDevices()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC10allDevicesSayACGyFZ">allDevices()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the audio devices currently available in the system.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This list may also include <em>Aggregate</em> and <em>Multi-Output</em> devices.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">allDevices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code>AudioDevice</code> objects.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC15allInputDevicesSayACGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/allInputDevices()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC15allInputDevicesSayACGyFZ">allInputDevices()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the devices in the system that have at least one input.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This list may also include <em>Aggregate</em> devices.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">allInputDevices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code>AudioDevice</code> objects.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16allOutputDevicesSayACGyFZ"></a>
+                    <a name="//apple_ref/swift/Method/allOutputDevices()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16allOutputDevicesSayACGyFZ">allOutputDevices()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the devices in the system that have at least one output.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The list may also include <em>Aggregate</em> and <em>Multi-Output</em> devices.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">allOutputDevices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of <code>AudioDevice</code> objects.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC012defaultInputC0ACSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/defaultInputDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC012defaultInputC0ACSgyFZ">defaultInputDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default input device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultInputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An <code>AudioDevice</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC013defaultOutputC0ACSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/defaultOutputDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC013defaultOutputC0ACSgyFZ">defaultOutputDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default output device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultOutputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An <code>AudioDevice</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC019defaultSystemOutputC0ACSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/defaultSystemOutputDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC019defaultSystemOutputC0ACSgyFZ">defaultSystemOutputDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default system output device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultSystemOutputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AudioDevice</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An <code>AudioDevice</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Default%20Device%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Default Device Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Default%20Device%20Functions"></a>
+                  <h3 class="section-name"><p>Default Device Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC017setAsDefaultInputC0SbyF"></a>
+                    <a name="//apple_ref/swift/Method/setAsDefaultInputDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC017setAsDefaultInputC0SbyF">setAsDefaultInputDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Promotes this device to become the default input device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAsDefaultInputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC018setAsDefaultOutputC0SbyF"></a>
+                    <a name="//apple_ref/swift/Method/setAsDefaultOutputDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC018setAsDefaultOutputC0SbyF">setAsDefaultOutputDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Promotes this device to become the default output device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAsDefaultOutputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC018setAsDefaultSystemC0SbyF"></a>
+                    <a name="//apple_ref/swift/Method/setAsDefaultSystemDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC018setAsDefaultSystemC0SbyF">setAsDefaultSystemDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Promotes this device to become the default system output device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAsDefaultSystemDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%9C%AA%20General%20Device%20Information%20Functions"></a>
+                <a name="//apple_ref/swift/Section/✪ General Device Information Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%9C%AA%20General%20Device%20Information%20Functions"></a>
+                  <h3 class="section-name"><p>✪ General Device Information Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC2ids6UInt32Vvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC2ids6UInt32Vvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s identifier (ID).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This identifier will change with system restarts.
+If you need an unique identifier that persists between restarts, use <code><a href="../Classes/AudioDevice.html#/s:11AMCoreAudio0B6DeviceC3uidSSSgvp">uid</a></code> instead.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/AudioDevice.html#/s:11AMCoreAudio0B6DeviceC3uidSSSgvp">uid</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">AudioObjectID</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An audio device identifier.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s name as reported by the system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An audio device&rsquo;s name.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC3uidSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC3uidSSSgvp">uid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s unique identifier (UID).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This identifier is guaranted to uniquely identify a device in the system
+and will not change even after restarts. Two (or more) identical audio devices
+are also guaranteed to have unique identifiers.</p>
+
+</div><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/AudioDevice.html#/s:11AMCoreAudio0B6DeviceC2ids6UInt32Vvp">id</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">uid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the audio device <code>UID</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC8modelUIDSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/modelUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC8modelUIDSSSgvp">modelUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s model unique identifier.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">modelUID</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the audio device&rsquo;s model unique identifier.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC12manufacturerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/manufacturer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC12manufacturerSSSgvp">manufacturer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s manufacturer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manufacturer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the audio device&rsquo;s manufacturer name.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC24configurationApplicationSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/configurationApplication" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC24configurationApplicationSSSgvp">configurationApplication</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The bundle identifier for an application that provides a GUI for configuring the AudioDevice.
+By default, the value of this property is the bundle ID for <em>Audio MIDI Setup</em>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configurationApplication</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> pointing to the bundle identifier</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC13transportTypeAA09TransportE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/transportType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC13transportTypeAA09TransportE0OSgvp">transportType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A transport type that indicates how the audio device is connected to the CPU.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">transportType</span><span class="p">:</span> <span class="kt"><a href="../Enums/TransportType.html">TransportType</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code><a href="../Enums/TransportType.html">TransportType</a></code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC8isHiddenSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isHidden()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC8isHiddenSbyF">isHidden()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the audio device is included in the normal list of devices.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Hidden devices can only be discovered by knowing their <code>UID</code> and
+using <code>kAudioHardwarePropertyDeviceForUID</code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isHidden</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when device is hidden, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC15isJackConnected9directionSbSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/isJackConnected(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC15isJackConnected9directionSbSgAA9DirectionO_tF">isJackConnected(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the audio device&rsquo;s jack is connected for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isJackConnected</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when jack is connected, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7isAliveSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isAlive()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7isAliveSbyF">isAlive()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the device is alive.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isAlive</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the device is alive, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC9isRunningSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isRunning()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC9isRunningSbyF">isRunning()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the device is running.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isRunning</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the device is running, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC18isRunningSomewhereSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isRunningSomewhere()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC18isRunningSomewhereSbyF">isRunningSomewhere()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the device is running somewhere.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isRunningSomewhere</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the device is running somewhere, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC4name7channel9directionSSSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/name(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC4name7channel9directionSSSgs6UInt32V_AA9DirectionOtF">name(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A human readable name for the channel number and direction specified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">name</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the name of the channel.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC14ownedObjectIDsSays6UInt32VGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/ownedObjectIDs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC14ownedObjectIDsSays6UInt32VGSgyF">ownedObjectIDs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the audio object identifiers that are owned by this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ownedObjectIDs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioObjectID</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An array of <code>AudioObjectID</code> values.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC11controlListSays6UInt32VGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/controlList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC11controlListSays6UInt32VGSgyF">controlList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the audio object identifiers representing the audio controls of this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">controlList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioObjectID</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An array of <code>AudioObjectID</code> values.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC14relatedDevicesSayACGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/relatedDevices()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC14relatedDevicesSayACGSgyF">relatedDevices()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All the audio devices related to this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">relatedDevices</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An array of <code>AudioDevice</code> objects.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%F0%9F%92%A3%20LFE%20(Low%20Frequency%20Effects)%20Functions"></a>
+                <a name="//apple_ref/swift/Section/💣 LFE (Low Frequency Effects) Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%F0%9F%92%A3%20LFE%20(Low%20Frequency%20Effects)%20Functions"></a>
+                  <h3 class="section-name"><p>💣 LFE (Low Frequency Effects) Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC13shouldOwniSubSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/shouldOwniSub" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC13shouldOwniSubSbSgvp">shouldOwniSub</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the audio device should claim ownership of any attached iSub or not.</p>
+
+<ul>
+<li>Return: <em>(optional)</em> <code>true</code> when device should claim ownership, <code>false</code> otherwise.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldOwniSub</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7lfeMuteSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lfeMute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7lfeMuteSbSgvp">lfeMute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the audio device&rsquo;s LFE (Low Frequency Effects) output is muted or not.</p>
+
+<ul>
+<li>Return: <em>(optional)</em> <code>true</code> when LFE output is muted, <code>false</code> otherwise.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lfeMute</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC9lfeVolumeSfSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lfeVolume" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC9lfeVolumeSfSgvp">lfeVolume</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s LFE (Low Frequency Effects) scalar output volume.</p>
+
+<ul>
+<li>Return: <em>(optional)</em> A <code>Float32</code> with the volume.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lfeVolume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC17lfeVolumeDecibelsSfSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lfeVolumeDecibels" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC17lfeVolumeDecibelsSfSgvp">lfeVolumeDecibels</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The audio device&rsquo;s LFE (Low Frequency Effects) output volume in decibels.</p>
+
+<ul>
+<li>Return: <em>(optional)</em> A <code>Float32</code> with the volume.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lfeVolumeDecibels</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%87%84%20Input/Output%20Layout%20Functions"></a>
+                <a name="//apple_ref/swift/Section/⇄ Input/Output Layout Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%87%84%20Input/Output%20Layout%20Functions"></a>
+                  <h3 class="section-name"><p>⇄ Input/Output Layout Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC14layoutChannels9directions6UInt32VSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/layoutChannels(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC14layoutChannels9directions6UInt32VSgAA9DirectionO_tF">layoutChannels(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of layout channels for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">layoutChannels</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> with the number of layout channels.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC8channels9directions6UInt32VAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/channels(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC8channels9directions6UInt32VAA9DirectionO_tF">channels(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of channels for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">channels</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>UInt32</code> with the number of channels.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC011isInputOnlyC0SbyF"></a>
+                    <a name="//apple_ref/swift/Method/isInputOnlyDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC011isInputOnlyC0SbyF">isInputOnlyDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the device has only inputs but no outputs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isInputOnlyDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the device is input only, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC012isOutputOnlyC0SbyF"></a>
+                    <a name="//apple_ref/swift/Method/isOutputOnlyDevice()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC012isOutputOnlyC0SbyF">isOutputOnlyDevice()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the device has only outputs but no inputs.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isOutputOnlyDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the device is output only, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%87%89%20Individual%20Channel%20Functions"></a>
+                <a name="//apple_ref/swift/Section/⇉ Individual Channel Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%87%89%20Individual%20Channel%20Functions"></a>
+                  <h3 class="section-name"><p>⇉ Individual Channel Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC10volumeInfo7channel9directionAA06VolumeE0VSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/volumeInfo(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC10volumeInfo7channel9directionAA06VolumeE0VSgs6UInt32V_AA9DirectionOtF">volumeInfo(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code><a href="../Structs/VolumeInfo.html">VolumeInfo</a></code> struct containing information about a particular channel and direction combination.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">volumeInfo</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/VolumeInfo.html">VolumeInfo</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code><a href="../Structs/VolumeInfo.html">VolumeInfo</a></code> struct.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC6volume7channel9directionSfSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/volume(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC6volume7channel9directionSfSgs6UInt32V_AA9DirectionOtF">volume(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The scalar volume for a given channel and direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">volume</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the scalar volume.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16volumeInDecibels7channel9directionSfSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/volumeInDecibels(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16volumeInDecibels7channel9directionSfSgs6UInt32V_AA9DirectionOtF">volumeInDecibels(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The volume in decibels <em>(dbFS)</em> for a given channel and direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">volumeInDecibels</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the volume in decibels.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC9setVolume_7channel9directionSbSf_s6UInt32VAA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/setVolume(_:channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC9setVolume_7channel9directionSbSf_s6UInt32VAA9DirectionOtF">setVolume(_:<wbr>channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the channel&rsquo;s volume for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setVolume</span><span class="p">(</span><span class="n">_</span> <span class="nv">volume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new volume as a scalar value ranging from 0 to 1.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7setMute_7channel9directionS2b_s6UInt32VAA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/setMute(_:channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7setMute_7channel9directionS2b_s6UInt32VAA9DirectionOtF">setMute(_:<wbr>channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mutes a channel for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setMute</span><span class="p">(</span><span class="n">_</span> <span class="nv">shouldMute</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shouldMute</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether channel should be muted or not.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7isMuted7channel9directionSbSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/isMuted(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7isMuted7channel9directionSbSgs6UInt32V_AA9DirectionOtF">isMuted(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether a channel is muted for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isMuted</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> <code>true</code> if channel is muted, false otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC20isMasterChannelMuted9directionSbSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/isMasterChannelMuted(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC20isMasterChannelMuted9directionSbSgAA9DirectionO_tF">isMasterChannelMuted(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the master channel is muted for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isMasterChannelMuted</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when muted, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7canMute7channel9directionSbs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/canMute(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7canMute7channel9directionSbs6UInt32V_AA9DirectionOtF">canMute(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether a channel can be muted for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMute</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if channel can be muted, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC20canMuteMasterChannel9directionSbAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/canMuteMasterChannel(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC20canMuteMasterChannel9directionSbAA9DirectionO_tF">canMuteMasterChannel(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the master volume can be muted for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMuteMasterChannel</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the volume can be muted, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC12canSetVolume7channel9directionSbs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/canSetVolume(channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC12canSetVolume7channel9directionSbs6UInt32V_AA9DirectionOtF">canSetVolume(channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether a channel&rsquo;s volume can be set for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canSetVolume</span><span class="p">(</span><span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the channel&rsquo;s volume can be set, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC26preferredChannelsForStereo9directions6UInt32V4left_AG5righttSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/preferredChannelsForStereo(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC26preferredChannelsForStereo9directions6UInt32V4left_AG5righttSgAA9DirectionO_tF">preferredChannelsForStereo(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of channel numbers that best represent the preferred stereo channels
+used by this device. In most occasions this will be channels 1 and 2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">preferredChannelsForStereo</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code><a href="../Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a></code> tuple containing the channel numbers.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC29setPreferredChannelsForStereo8channels9directionSbs6UInt32V4left_AH5rightt_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/setPreferredChannelsForStereo(channels:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC29setPreferredChannelsForStereo8channels9directionSbs6UInt32V4left_AH5rightt_AA9DirectionOtF">setPreferredChannelsForStereo(channels:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to set the new preferred channels for stereo for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setPreferredChannelsForStereo</span><span class="p">(</span><span class="nv">channels</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a></span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channels</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Typealiases.html#/s:11AMCoreAudio10StereoPaira">StereoPair</a></code> representing the preferred channels.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%F0%9F%94%8A%20Virtual%20Master%20Volume%20/%20Balance%20Functions"></a>
+                <a name="//apple_ref/swift/Section/🔊 Virtual Master Volume / Balance Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%F0%9F%94%8A%20Virtual%20Master%20Volume%20/%20Balance%20Functions"></a>
+                  <h3 class="section-name"><p>🔊 Virtual Master Volume / Balance Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC25canSetVirtualMasterVolume9directionSbAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/canSetVirtualMasterVolume(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC25canSetVirtualMasterVolume9directionSbAA9DirectionO_tF">canSetVirtualMasterVolume(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether the master volume can be set for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canSetVirtualMasterVolume</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> when the volume can be set, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC22setVirtualMasterVolume_9directionSbSf_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/setVirtualMasterVolume(_:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC22setVirtualMasterVolume_9directionSbSf_AA9DirectionOtF">setVirtualMasterVolume(_:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the virtual master volume for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setVirtualMasterVolume</span><span class="p">(</span><span class="n">_</span> <span class="nv">volume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new volume as a scalar value ranging from 0 to 1.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC19virtualMasterVolume9directionSfSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/virtualMasterVolume(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC19virtualMasterVolume9directionSfSgAA9DirectionO_tF">virtualMasterVolume(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The virtual master scalar volume for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">virtualMasterVolume</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the scalar volume.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC29virtualMasterVolumeInDecibels9directionSfSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/virtualMasterVolumeInDecibels(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC29virtualMasterVolumeInDecibels9directionSfSgAA9DirectionO_tF">virtualMasterVolumeInDecibels(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The virtual master volume in decibels for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">virtualMasterVolumeInDecibels</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the volume in decibels.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC20virtualMasterBalance9directionSfSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/virtualMasterBalance(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC20virtualMasterBalance9directionSfSgAA9DirectionO_tF">virtualMasterBalance(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The virtual master balance for a given direction.</p>
+
+<p>The range is from 0 (all power to the left) to 1 (all power to the right) with the value of 0.5 signifying
+that the channels have equal power.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">virtualMasterBalance</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the stereo balance.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC23setVirtualMasterBalance_9directionSbSf_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/setVirtualMasterBalance(_:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC23setVirtualMasterBalance_9directionSbSf_AA9DirectionOtF">setVirtualMasterBalance(_:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the new virtual master balance for a given direction.</p>
+
+<p>The range is from 0 (all power to the left) to 1 (all power to the right) with the value of 0.5 signifying
+that the channels have equal power.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setVirtualMasterBalance</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new balance.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E3%80%B0%20Sample%20Rate%20Functions"></a>
+                <a name="//apple_ref/swift/Section/〰 Sample Rate Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E3%80%B0%20Sample%20Rate%20Functions"></a>
+                  <h3 class="section-name"><p>〰 Sample Rate Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16actualSampleRateSdSgyF"></a>
+                    <a name="//apple_ref/swift/Method/actualSampleRate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16actualSampleRateSdSgyF">actualSampleRate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The actual audio device&rsquo;s sample rate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">actualSampleRate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float64</code> value with the actual sample rate.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC17nominalSampleRateSdSgyF"></a>
+                    <a name="//apple_ref/swift/Method/nominalSampleRate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC17nominalSampleRateSdSgyF">nominalSampleRate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The nominal audio device&rsquo;s sample rate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nominalSampleRate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Float64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float64</code> value with the nominal sample rate.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC20setNominalSampleRateySbSdF"></a>
+                    <a name="//apple_ref/swift/Method/setNominalSampleRate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC20setNominalSampleRateySbSdF">setNominalSampleRate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the nominal sample rate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setNominalSampleRate</span><span class="p">(</span><span class="n">_</span> <span class="nv">sampleRate</span><span class="p">:</span> <span class="kt">Float64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sampleRate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new nominal sample rate.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC18nominalSampleRatesSaySdGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/nominalSampleRates()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC18nominalSampleRatesSaySdGSgyF">nominalSampleRates()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of all the nominal sample rates supported by this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nominalSampleRates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Float64</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float64</code> array containing the nominal sample rates.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%9A%84%20Data%20Source%20Functions"></a>
+                <a name="//apple_ref/swift/Section/⚄ Data Source Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%9A%84%20Data%20Source%20Functions"></a>
+                  <h3 class="section-name"><p>⚄ Data Source Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC10dataSource9directionSays6UInt32VGSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/dataSource(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC10dataSource9directionSays6UInt32VGSgAA9DirectionO_tF">dataSource(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of item IDs for the currently selected data sources.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dataSource</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> array containing all the item IDs.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC11dataSources9directionSays6UInt32VGSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/dataSources(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC11dataSources9directionSays6UInt32VGSgAA9DirectionO_tF">dataSources(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of all the IDs of all the data sources currently available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dataSources</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> array containing all the item IDs.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC14dataSourceName0dE2ID9directionSSSgs6UInt32V_AA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/dataSourceName(dataSourceID:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC14dataSourceName0dE2ID9directionSSSgs6UInt32V_AA9DirectionOtF">dataSourceName(dataSourceID:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the data source name for a given data source ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dataSourceName</span><span class="p">(</span><span class="nv">dataSourceID</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataSourceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A data source ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the data source name.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%F0%9D%8D%84%20Clock%20Source%20Functions"></a>
+                <a name="//apple_ref/swift/Section/𝍄 Clock Source Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%F0%9D%8D%84%20Clock%20Source%20Functions"></a>
+                  <h3 class="section-name"><p>𝍄 Clock Source Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC13clockSourceIDs6UInt32VSgyF"></a>
+                    <a name="//apple_ref/swift/Method/clockSourceID()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC13clockSourceIDs6UInt32VSgyF">clockSourceID()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current clock source identifier for this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clockSourceID</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> containing the clock source identifier.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC15clockSourceNameSSSgyF"></a>
+                    <a name="//apple_ref/swift/Method/clockSourceName()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC15clockSourceNameSSSgyF">clockSourceName()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current clock source name for this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clockSourceName</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> containing the clock source name.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC14clockSourceIDsSays6UInt32VGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/clockSourceIDs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC14clockSourceIDsSays6UInt32VGSgyF">clockSourceIDs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of all the clock source identifiers available for this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clockSourceIDs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UInt32</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> array containing all the clock source identifiers.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16clockSourceNamesSaySSGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/clockSourceNames()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16clockSourceNamesSaySSGSgyF">clockSourceNames()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A list of all the clock source names available for this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clockSourceNames</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> array containing all the clock source names.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC15clockSourceName0dE2IDSSSgs6UInt32V_tF"></a>
+                    <a name="//apple_ref/swift/Method/clockSourceName(clockSourceID:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC15clockSourceName0dE2IDSSSgs6UInt32V_tF">clockSourceName(clockSourceID:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the clock source name for a given clock source ID.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clockSourceName</span><span class="p">(</span><span class="nv">clockSourceID</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clockSourceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A clock source ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>String</code> with the source clock name.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16setClockSourceIDySbs6UInt32VF"></a>
+                    <a name="//apple_ref/swift/Method/setClockSourceID(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16setClockSourceIDySbs6UInt32VF">setClockSourceID(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the clock source for this audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setClockSourceID</span><span class="p">(</span><span class="n">_</span> <span class="nv">clockSourceID</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>clockSourceID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A clock source ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%86%B9%20Latency%20Functions"></a>
+                <a name="//apple_ref/swift/Section/↹ Latency Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%86%B9%20Latency%20Functions"></a>
+                  <h3 class="section-name"><p>↹ Latency Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7latency9directions6UInt32VSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/latency(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7latency9directions6UInt32VSgAA9DirectionO_tF">latency(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The latency in frames for the specified direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">latency</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> value with the latency in frames.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC12safetyOffset9directions6UInt32VSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/safetyOffset(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC12safetyOffset9directions6UInt32VSgAA9DirectionO_tF">safetyOffset(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The safety offset frames for the specified direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">safetyOffset</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>UInt32</code> value with the safety offset in frames.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%F0%9F%90%97%20Hog%20Mode%20Functions"></a>
+                <a name="//apple_ref/swift/Section/🐗 Hog Mode Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%F0%9F%90%97%20Hog%20Mode%20Functions"></a>
+                  <h3 class="section-name"><p>🐗 Hog Mode Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC10hogModePIDs5Int32VSgyF"></a>
+                    <a name="//apple_ref/swift/Method/hogModePID()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC10hogModePIDs5Int32VSgyF">hogModePID()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates the <code>pid</code> that currently owns exclusive access to the audio device or
+a value of <code>-1</code> indicating that the device is currently available to all processes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hogModePID</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">pid_t</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>pid_t</code> value.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC10setHogModeSbyF"></a>
+                    <a name="//apple_ref/swift/Method/setHogMode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC10setHogModeSbyF">setHogMode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to set the <code>pid</code> that currently owns exclusive access to the
+audio device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setHogMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC12unsetHogModeSbyF"></a>
+                    <a name="//apple_ref/swift/Method/unsetHogMode()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC12unsetHogModeSbyF">unsetHogMode()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempts to make the audio device available to all processes by setting
+the hog mode to <code>-1</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsetHogMode</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%99%BA%20Volume%20Conversion%20Functions"></a>
+                <a name="//apple_ref/swift/Section/♺ Volume Conversion Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%99%BA%20Volume%20Conversion%20Functions"></a>
+                  <h3 class="section-name"><p>♺ Volume Conversion Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16scalarToDecibels6volume7channel9directionSfSgSf_s6UInt32VAA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/scalarToDecibels(volume:channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16scalarToDecibels6volume7channel9directionSfSgSf_s6UInt32VAA9DirectionOtF">scalarToDecibels(volume:<wbr>channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a scalar volume to a decibel <em>(dbFS)</em> volume for the given channel and direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scalarToDecibels</span><span class="p">(</span><span class="nv">volume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A scalar volume.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel number.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the scalar volume converted in decibels.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC16decibelsToScalar6volume7channel9directionSfSgSf_s6UInt32VAA9DirectionOtF"></a>
+                    <a name="//apple_ref/swift/Method/decibelsToScalar(volume:channel:direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC16decibelsToScalar6volume7channel9directionSfSgSf_s6UInt32VAA9DirectionOtF">decibelsToScalar(volume:<wbr>channel:<wbr>direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Converts a relative decibel <em>(dbFS)</em> volume to a scalar volume for the given channel and direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">decibelsToScalar</span><span class="p">(</span><span class="nv">volume</span><span class="p">:</span> <span class="kt">Float32</span><span class="p">,</span> <span class="nv">channel</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Float32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>volume</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A volume in relative decibels (dbFS).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>channel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A channel number.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> A <code>Float32</code> value with the decibels volume converted to scalar.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/%E2%99%A8%EF%B8%8E%20Stream%20Functions"></a>
+                <a name="//apple_ref/swift/Section/♨︎ Stream Functions" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/%E2%99%A8%EF%B8%8E%20Stream%20Functions"></a>
+                  <h3 class="section-name"><p>♨︎ Stream Functions</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC7streams9directionSayAA0B6StreamCGSgAA9DirectionO_tF"></a>
+                    <a name="//apple_ref/swift/Method/streams(direction:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC7streams9directionSayAA0B6StreamCGSgAA9DirectionO_tF">streams(direction:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a list of streams for a given direction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">streams</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/AudioStream.html">AudioStream</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>direction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A direction.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><em>(optional)</em> An array of <code><a href="../Classes/AudioStream.html">AudioStream</a></code> objects.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/CustomStringConvertible%20Protocol"></a>
+                <a name="//apple_ref/swift/Section/CustomStringConvertible Protocol" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/CustomStringConvertible%20Protocol"></a>
+                  <h3 class="section-name"><p>CustomStringConvertible Protocol</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11AMCoreAudio0B6DeviceC11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11AMCoreAudio0B6DeviceC11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code>String</code> representation of self.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="https://github.com/rnine/AMCoreAudio" target="_blank" rel="external">9Labs</a>. All rights reserved. (Last updated: 2020-05-01)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
