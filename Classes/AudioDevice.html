@@ -112,7 +112,7 @@
 
                 </div>
               </div>
-            <p><code>AudioDevice</code> represents an audio device in the system.</p>
+            <p><code>AudioDevice</code> represents an audio device managed by Core Audio.</p>
 
 <p>Devices may be physical or virtual. For a comprehensive list of supported types, please refer to <code><a href="../Enums/TransportType.html">TransportType</a></code>.</p>
 
@@ -145,7 +145,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The audio device&rsquo;s name as reported by the system.</p>
+                        <p>The audio device&rsquo;s name as reported by Core Audio.</p>
 
                       </div>
                       <div class="declaration">
@@ -1590,7 +1590,7 @@ If you need an unique identifier that persists between restarts, use <code><a hr
                         <p>The audio device&rsquo;s unique identifier (UID).</p>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>This identifier is guaranted to uniquely identify a device in the system
+    <p>This identifier is guaranted to uniquely identify a device in Core Audio
 and will not change even after restarts. Two (or more) identical audio devices
 are also guaranteed to have unique identifiers.</p>
 
