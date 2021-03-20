@@ -1,6 +1,19 @@
 {
   "warnings": [
-
+    {
+      "file": "/Users/ruben/src/frameworks/SimplyCoreAudio/Source/Public/SimplyCoreAudio.swift",
+      "line": 10,
+      "symbol": "SimplyCoreAudio",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/ruben/src/frameworks/SimplyCoreAudio/Source/Public/SimplyCoreAudio.swift",
+      "line": 110,
+      "symbol": "SimplyCoreAudio",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    }
   ],
-  "source_directory": "/Users/ruben/src/frameworks/AMCoreAudio"
+  "source_directory": "/Users/ruben/src/frameworks/SimplyCoreAudio"
 }
