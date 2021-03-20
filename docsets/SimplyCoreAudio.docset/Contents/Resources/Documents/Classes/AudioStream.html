@@ -33,7 +33,7 @@
       </p>
     
         <p class="header-col header-col--secondary">
-          <a class="header-link" href="https://github.com/rnine/AMCoreAudio">
+          <a class="header-link" href="https://github.com/rnine/SimplyCoreAudio">
             <img class="header-icon" src="../img/gh.png"/>
             View on GitHub
           </a>
@@ -71,7 +71,7 @@
             <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/Direction.html">Direction</a>
+                <a class="nav-group-task-link" href="../Enums/Scope.html">Scope</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/TerminalType.html">TerminalType</a>
@@ -295,9 +295,9 @@ stream latency.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15SimplyCoreAudio0C6StreamC9directionAA9DirectionOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/direction" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15SimplyCoreAudio0C6StreamC9directionAA9DirectionOSgvp">direction</a>
+                    <a name="/s:15SimplyCoreAudio0C6StreamC5scopeAA5ScopeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scope" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15SimplyCoreAudio0C6StreamC5scopeAA5ScopeOSgvp">scope</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -305,23 +305,23 @@ stream latency.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The audio stream&rsquo;s direction.</p>
+                        <p>The audio stream&rsquo;s scope.</p>
 
-<p>For output streams, and to continue using the same <code><a href="../Enums/Direction.html">Direction</a></code> concept used by <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>,
-this will be <code>Direction.Playback</code>, likewise, for input streams, <code>Direction.Recording</code> will be returned.</p>
+<p>For output streams, and to continue using the same <code><a href="../Enums/Scope.html">Scope</a></code> concept used by <code><a href="../Classes/AudioDevice.html">AudioDevice</a></code>,
+this will be <code><a href="../Enums/Scope.html#/s:15SimplyCoreAudio5ScopeO6outputyA2CmF">Scope.output</a></code>, likewise, for input streams, <code><a href="../Enums/Scope.html#/s:15SimplyCoreAudio5ScopeO5inputyA2CmF">Scope.input</a></code> will be returned.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/Direction.html">Direction</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scope</span><span class="p">:</span> <span class="kt"><a href="../Enums/Scope.html">Scope</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><em>(optional)</em> A <code><a href="../Enums/Direction.html">Direction</a></code>.</p>
+                        <p><em>(optional)</em> A <code><a href="../Enums/Scope.html">Scope</a></code>.</p>
                       </div>
                     </section>
                   </div>
