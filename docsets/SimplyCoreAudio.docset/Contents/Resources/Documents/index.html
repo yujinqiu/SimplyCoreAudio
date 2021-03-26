@@ -374,14 +374,12 @@
 <h3 id='installing-code-nullaudio-driver-code' class='heading'>Installing <code>NullAudio.driver</code></h3>
 
 <ol>
-<li>Unzip <code>NullAudio.driver.zip</code> included in <code>Tests/Extras</code>
-<code>shell
-sudo unzip Tests/Extras/NullAudio.driver.zip -d /Library/Audio/Plug-Ins/HAL
-</code></li>
-<li>Reload <code>coreaudiod</code>
-<code>shell
-sudo launchctl kill KILL system/com.apple.audio.coreaudiod
-</code></li>
+<li><p>Unzip <code>NullAudio.driver.zip</code> included in <code>Tests/Extras</code></p>
+<pre class="highlight shell"><code><span class="nb">sudo </span>unzip Tests/Extras/NullAudio.driver.zip <span class="nt">-d</span> /Library/Audio/Plug-Ins/HAL
+</code></pre></li>
+<li><p>Reload <code>coreaudiod</code></p>
+<pre class="highlight shell"><code><span class="nb">sudo </span>launchctl <span class="nb">kill </span>KILL system/com.apple.audio.coreaudiod
+</code></pre></li>
 </ol>
 <h3 id='license' class='heading'>License</h3>
 
