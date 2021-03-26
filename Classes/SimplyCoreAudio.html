@@ -132,16 +132,6 @@ to an object of this class.
 
 </div>
 
-<p>However, <em>do not</em> keep more than one instance of this class at the same time to avoid receiving duplicated
-notifications.</p>
-
-<p>As soon as the last remaining instance of this class is deallocated, hardware-related notifications will no longer
-be delivered.</p>
-
-<p>We could have designed this class to always return a shared instance, but ultimately decided to allow developers
-total control so they have the chance to cleanup any resources used by <code>SimplyCoreAudio</code> such as hardware-related
-Core Audio property listeners by simply deallocating any instances of this class.</p>
-
           </div>
         </section>
 
