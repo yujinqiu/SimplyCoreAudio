@@ -123,15 +123,15 @@
 <a href="https://github.com/rnine/SimplyCoreAudio/blob/develop/LICENSE.md"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="License"></a></p>
 
 <p><code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code> (formerly known as <code>AMCoreAudio</code>) is a Swift framework that aims to make <a href="https://developer.apple.com/documentation/coreaudio">Core Audio</a> use less tedious in macOS.</p>
-
-<p>Here&rsquo;s some of the supported features:</p>
+<h3 id='features' class='heading'>Features</h3>
 
 <ul>
-<li>Simplifies audio device enumeration</li>
-<li>Provides accessors for the most relevant audio device properties (i.e., device name, device manufacturer, device UID, volume, mute, sample rate, clock source, etc.)</li>
-<li>Manages (physical and virtual) audio streams associated to an audio device</li>
-<li>Creates and destroyes aggregate devices</li>
-<li>Allows subscribing to audio hardware, audio device, and audio stream notifications</li>
+<li>Enumerating audio devices (see <a href="https://rnine.github.io/SimplyCoreAudio/Classes/SimplyCoreAudio.html">SimplyCoreAudio</a>)</li>
+<li>Getting/setting default input, output and system device (see <a href="https://rnine.github.io/SimplyCoreAudio/Classes/SimplyCoreAudio.html">SimplyCoreAudio</a>)</li>
+<li>Creation and destroyal of aggregate devices (see <a href="https://rnine.github.io/SimplyCoreAudio/Classes/SimplyCoreAudio.html">SimplyCoreAudio</a>)</li>
+<li>Querying audio device properties such as: name, manufacturer, UID, volume, mute, sample rate, clock source, etc. (see <a href="https://rnine.github.io/SimplyCoreAudio/Classes/AudioDevice.html">AudioDevice</a>)</li>
+<li>Managing (physical and virtual) audio streams associated to an audio device (see <a href="https://rnine.github.io/SimplyCoreAudio/Classes/AudioStream.html">AudioStream</a>)</li>
+<li>Subscribing to audio hardware, audio device, and audio stream notifications (see <a href="https://rnine.github.io/SimplyCoreAudio/Extensions/Notification/Name.html%5D">Notification Extensions</a>)</li>
 </ul>
 <h3 id='resources' class='heading'>Resources</h3>
 
@@ -225,125 +225,125 @@ import SimplyCoreAudio
 
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Purpose</th>
-<th>User Info</th>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Purpose</th>
+<th style="text-align: left">User Info</th>
 </tr>
 </thead><tbody>
 <tr>
-<td><code>defaultInputDeviceChanged</code></td>
-<td>Called whenever the default input device changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>defaultInputDeviceChanged</code></td>
+<td style="text-align: left">Called whenever the default input device changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>defaultOutputDeviceChanged</code></td>
-<td>Called whenever the default output device changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>defaultOutputDeviceChanged</code></td>
+<td style="text-align: left">Called whenever the default output device changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>defaultSystemOutputDeviceChanged</code></td>
-<td>Called whenever the default system output device changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>defaultSystemOutputDeviceChanged</code></td>
+<td style="text-align: left">Called whenever the default system output device changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceListChanged</code></td>
-<td>Called whenever the list of hardware devices and device subdevices changes.</td>
-<td><code>addedDevices: [AudioDevice]</code>, <code>removedDevices: [AudioDevice]</code></td>
+<td style="text-align: left"><code>deviceListChanged</code></td>
+<td style="text-align: left">Called whenever the list of hardware devices and device subdevices changes.</td>
+<td style="text-align: left"><code>addedDevices: [AudioDevice]</code>, <code>removedDevices: [AudioDevice]</code></td>
 </tr>
 </tbody></table>
 <h4 id='audio-device-notifications' class='heading'>Audio Device Notifications</h4>
 
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Purpose</th>
-<th>User Info</th>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Purpose</th>
+<th style="text-align: left">User Info</th>
 </tr>
 </thead><tbody>
 <tr>
-<td><code>deviceNominalSampleRateDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s sample rate changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceNominalSampleRateDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s sample rate changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceAvailableNominalSampleRatesDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceAvailableNominalSampleRatesDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceClockSourceDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s clock source changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceClockSourceDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s clock source changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceNameDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s name changes.</td>
-<td></td>
+<td style="text-align: left"><code>deviceNameDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s name changes.</td>
+<td style="text-align: left"></td>
 </tr>
 <tr>
-<td><code>deviceOwnedObjectsDidChange</code></td>
-<td>Called whenever the list of owned audio devices on this audio device changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceOwnedObjectsDidChange</code></td>
+<td style="text-align: left">Called whenever the list of owned audio devices on this audio device changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceVolumeDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s volume for a given channel and scope changes.</td>
-<td><code>channel: UInt32</code>, <code>scope: Scope</code></td>
+<td style="text-align: left"><code>deviceVolumeDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s volume for a given channel and scope changes.</td>
+<td style="text-align: left"><code>channel: UInt32</code>, <code>scope: Scope</code></td>
 </tr>
 <tr>
-<td><code>deviceMuteDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s mute state for a given channel and scope changes.</td>
-<td><code>channel: UInt32</code>, <code>scope: Scope</code></td>
+<td style="text-align: left"><code>deviceMuteDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s mute state for a given channel and scope changes.</td>
+<td style="text-align: left"><code>channel: UInt32</code>, <code>scope: Scope</code></td>
 </tr>
 <tr>
-<td><code>deviceIsAliveDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceIsAliveDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceIsRunningDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s <em>is running</em> property changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceIsRunningDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s <em>is running</em> property changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceIsRunningSomewhereDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s <em>is running somewhere</em> property changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceIsRunningSomewhereDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s <em>is running somewhere</em> property changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceIsJackConnectedDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s <em>is jack connected</em> property changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceIsJackConnectedDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s <em>is jack connected</em> property changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>devicePreferredChannelsForStereoDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s <em>preferred channels for stereo</em> property changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>devicePreferredChannelsForStereoDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s <em>preferred channels for stereo</em> property changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>deviceHogModeDidChange</code></td>
-<td>Called whenever the audio device&rsquo;s <em>hog mode</em> property changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>deviceHogModeDidChange</code></td>
+<td style="text-align: left">Called whenever the audio device&rsquo;s <em>hog mode</em> property changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 </tbody></table>
 <h4 id='audio-stream-notifications' class='heading'>Audio Stream Notifications</h4>
 
 <table><thead>
 <tr>
-<th>Name</th>
-<th>Purpose</th>
-<th>User Info</th>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Purpose</th>
+<th style="text-align: left">User Info</th>
 </tr>
 </thead><tbody>
 <tr>
-<td><code>streamIsActiveDidChange</code></td>
-<td>Called whenever the audio stream <code>isActive</code> flag changes state.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>streamIsActiveDidChange</code></td>
+<td style="text-align: left">Called whenever the audio stream <code>isActive</code> flag changes state.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 <tr>
-<td><code>streamPhysicalFormatDidChange</code></td>
-<td>Called whenever the audio stream physical format changes.</td>
-<td>N/A</td>
+<td style="text-align: left"><code>streamPhysicalFormatDidChange</code></td>
+<td style="text-align: left">Called whenever the audio stream physical format changes.</td>
+<td style="text-align: left">N/A</td>
 </tr>
 </tbody></table>
 <h3 id='further-development-amp-patches' class='heading'>Further Development &amp; Patches</h3>
