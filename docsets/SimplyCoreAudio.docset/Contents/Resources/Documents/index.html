@@ -151,7 +151,7 @@
 <p>To install our Swift Package, please follow the steps below:</p>
 
 <ul>
-<li>Add <a href="https://github.com/rnine/SimplyCoreAudio.git">https://github.com/rnine/SimplyCoreAudio.git</a> as a <a href="https://swift.org/package-manager/">Swift Package Manager</a> dependency to your project.</li>
+<li>Add <code>https://github.com/rnine/SimplyCoreAudio.git</code> as a <a href="https://swift.org/package-manager/">Swift Package Manager</a> dependency to your project.</li>
 <li>When asked to <strong>Choose Package Options</strong>, use the default settings provided by Xcode.</li>
 <li>When asked to <strong>Add Package</strong>, add <code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code> to your desired target(s).</li>
 </ul>
@@ -210,6 +210,26 @@
 <span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
     <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceNominalSampleRateDidChange</span><span class="p">,</span>
     <span class="nv">object</span><span class="p">:</span> <span class="n">device</span><span class="p">,</span>
+    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// Handle notification.</span>
+<span class="p">}</span>
+
+<span class="c1">// Once done observing, remove observer and nil it.</span>
+<span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">removeObserver</span><span class="p">(</span><span class="n">observer</span><span class="p">)</span>
+<span class="n">observer</span> <span class="o">=</span> <span class="kc">nil</span>
+</code></pre></li>
+<li><p>Subscribe to notifications from a specific audio stream</p>
+<pre class="highlight swift"><code><span class="c1">// Get the default output device</span>
+<span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="n">simplyCA</span><span class="o">.</span><span class="n">defaultOutputDevice</span>
+
+<span class="c1">// Get the first output stream</span>
+<span class="k">guard</span> <span class="k">let</span> <span class="nv">streams</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="nf">streams</span><span class="p">(</span><span class="nv">scope</span><span class="p">:</span> <span class="o">.</span><span class="n">output</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+<span class="k">guard</span> <span class="k">let</span> <span class="nv">stream0</span> <span class="o">=</span> <span class="n">streams</span><span class="o">.</span><span class="n">first</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+
+<span class="c1">// e.g., subscribing to `streamPhysicalFormatDidChange` notification.</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
+    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">streamPhysicalFormatDidChange</span><span class="p">,</span>
+    <span class="nv">object</span><span class="p">:</span> <span class="n">stream0</span><span class="p">,</span>
     <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Handle notification.</span>
 <span class="p">}</span>
