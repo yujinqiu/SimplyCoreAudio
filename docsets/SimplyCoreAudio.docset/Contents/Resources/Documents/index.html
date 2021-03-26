@@ -124,31 +124,224 @@
 
 <p><code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code> (formerly known as <code>AMCoreAudio</code>) is a Swift framework that aims to make <a href="https://developer.apple.com/library/mac/documentation/MusicAudio/Conceptual/CoreAudioOverview/">Core Audio</a> use less tedious in macOS.</p>
 
-<p>Here&rsquo;s a few things it can do:</p>
+<p>Here&rsquo;s some of the supported features:</p>
 
 <ul>
-<li>Simplifying audio device enumeration</li>
-<li>Providing accessors for the most relevant audio device properties (i.e., device name, device manufacturer, device UID, volume, mute, sample rate, clock source, etc.)</li>
-<li>Managing (physical and virtual) audio streams associated to an audio device</li>
-<li>Subscribing to audio hardware, audio device, and audio stream events</li>
-<li>etc.</li>
+<li>Simplifies audio device enumeration</li>
+<li>Provides accessors for the most relevant audio device properties (i.e., device name, device manufacturer, device UID, volume, mute, sample rate, clock source, etc.)</li>
+<li>Manages (physical and virtual) audio streams associated to an audio device</li>
+<li>Creates and destroyes aggregate devices</li>
+<li>Allows subscribing to audio hardware, audio device, and audio stream notifications</li>
 </ul>
 <h3 id='requirements' class='heading'>Requirements</h3>
 
 <ul>
-<li>macOS 10.12 or later</li>
-<li>Xcode 12 or later</li>
-<li>Swift 4.0 or later</li>
+<li>Xcode 12+</li>
+<li>Swift 4.0+</li>
+<li>macOS 10.12+</li>
 </ul>
+<h3 id='installation' class='heading'>Installation</h3>
 
-<p><strong>Note:</strong> If you are targeting macOS versions 10.7 or 10.8 please use the <a href="https://github.com/rnine/SimplyCoreAudio/tree/objc">objc branch</a>.</p>
+<p>To install our Swift Package, please follow the steps below:</p>
 
-<p><img src="https://github.com/rnine/SimplyCoreAudio/raw/develop/images/screenshot.png?raw=true" alt="Alt text" title="SimplyCoreAudio Demo (Output tab)"></p>
+<ul>
+<li>Add <a href="https://github.com/rnine/SimplyCoreAudio.git">https://github.com/rnine/SimplyCoreAudio.git</a> as a <a href="https://swift.org/package-manager/">Swift Package Manager</a> dependency to your project.</li>
+<li>When asked to <strong>Choose Package Options</strong>, use the default settings provided by Xcode.</li>
+<li>When asked to <strong>Add Package</strong>, add <code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code> to your desired target(s).</li>
+</ul>
+<h3 id='usage' class='heading'>Usage</h3>
+
+<ol>
+<li>Import <code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code>
+<code>swift
+import SimplyCoreAudio
+</code>`</li>
+<li><p>Instantiate <code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">simplyCA</span> <span class="o">=</span> <span class="kt">SimplyCoreAudio</span><span class="p">()</span>
+</code></pre></li>
+<li><p>Interact with <code><a href="Classes/SimplyCoreAudio.html">SimplyCoreAudio</a></code></p>
+<pre class="highlight swift"><code><span class="c1">// Get the default output device</span>
+<span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="n">simplyCA</span><span class="o">.</span><span class="n">defaultOutputDevice</span>
+
+<span class="c1">// Get preferred output channels</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">stereoPair</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="nf">preferredChannelsForStereo</span><span class="p">(</span><span class="nv">scope</span><span class="p">:</span> <span class="o">.</span><span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">leftChannel</span> <span class="o">=</span> <span class="n">stereoPair</span><span class="o">.</span><span class="n">left</span>
+    <span class="k">let</span> <span class="nv">rightChannel</span> <span class="o">=</span> <span class="n">stereoPair</span><span class="o">.</span><span class="n">right</span>
+    <span class="c1">// Use channels...</span>
+<span class="p">}</span>
+
+<span class="c1">// Get device samplerate</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">sampleRate</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">nominalSampleRate</span> <span class="p">{</span>
+    <span class="c1">// Use samplerate...</span>
+<span class="p">}</span>
+
+<span class="c1">// Get device virtual master volume</span>
+<span class="k">if</span> <span class="k">let</span> <span class="nv">outVolume</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="nf">virtualMasterVolume</span><span class="p">(</span><span class="nv">scope</span><span class="p">:</span> <span class="o">.</span><span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use output volume...</span>
+<span class="p">}</span>
+</code></pre></li>
+<li><p>Subscribe to hardware-related notifications</p>
+<pre class="highlight swift"><code><span class="c1">// e.g., subscribing to `deviceListChanged` notification.</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
+    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceListChanged</span><span class="p">,</span>
+    <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// Get added devices.</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">addedDevices</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="s">"addedDevices"</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+
+    <span class="c1">// Get removed devices.</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">removedDevices</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="s">"removedDevices"</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Once done observing, remove observer and nil it.</span>
+<span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">removeObserver</span><span class="p">(</span><span class="n">observer</span><span class="p">)</span>
+<span class="n">observer</span> <span class="o">=</span> <span class="kc">nil</span>
+</code></pre></li>
+<li><p>Subscribe to specific audio device notifications</p>
+<pre class="highlight swift"><code><span class="c1">// Get the default output device</span>
+<span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="n">simplyCA</span><span class="o">.</span><span class="n">defaultOutputDevice</span>
+
+<span class="c1">// e.g., subscribing to `deviceNominalSampleRateDidChange` notification.</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
+    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceNominalSampleRateDidChange</span><span class="p">,</span>
+    <span class="nv">object</span><span class="p">:</span> <span class="n">device</span><span class="p">,</span>
+    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+    <span class="c1">// Handle notification.</span>
+<span class="p">}</span>
+
+<span class="c1">// Once done observing, remove observer and nil it.</span>
+<span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">removeObserver</span><span class="p">(</span><span class="n">observer</span><span class="p">)</span>
+<span class="n">observer</span> <span class="o">=</span> <span class="kc">nil</span>
+</code></pre></li>
+</ol>
 <h3 id='documentation' class='heading'>Documentation</h3>
 
 <ul>
 <li><a href="https://rnine.github.io/SimplyCoreAudio">API Documentation</a></li>
 </ul>
+<h3 id='supported-notifications' class='heading'>Supported Notifications</h3>
+<h4 id='audio-hardware-notifications' class='heading'>Audio Hardware Notifications</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+<th>User Info</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>defaultInputDeviceChanged</code></td>
+<td>Called whenever the default input device changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>defaultOutputDeviceChanged</code></td>
+<td>Called whenever the default output device changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>defaultSystemOutputDeviceChanged</code></td>
+<td>Called whenever the default system output device changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceListChanged</code></td>
+<td>Called whenever the list of hardware devices and device subdevices changes.</td>
+<td><code>addedDevices: [AudioDevice]</code>, <code>removedDevices: [AudioDevice]</code></td>
+</tr>
+</tbody></table>
+<h4 id='audio-device-notifications' class='heading'>Audio Device Notifications</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+<th>User Info</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>deviceNominalSampleRateDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s sample rate changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceAvailableNominalSampleRatesDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceClockSourceDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s clock source changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceNameDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s name changes.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>deviceOwnedObjectsDidChange</code></td>
+<td>Called whenever the list of owned audio devices on this audio device changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceVolumeDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s volume for a given channel and scope changes.</td>
+<td><code>channel: UInt32</code>, <code>scope: Scope</code></td>
+</tr>
+<tr>
+<td><code>deviceMuteDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s mute state for a given channel and scope changes.</td>
+<td><code>channel: UInt32</code>, <code>scope: Scope</code></td>
+</tr>
+<tr>
+<td><code>deviceIsAliveDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s list of nominal sample rates changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceIsRunningDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s <em>is running</em> property changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceIsRunningSomewhereDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s <em>is running somewhere</em> property changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceIsJackConnectedDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s <em>is jack connected</em> property changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>devicePreferredChannelsForStereoDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s <em>preferred channels for stereo</em> property changes.</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><code>deviceHogModeDidChange</code></td>
+<td>Called whenever the audio device&rsquo;s <em>hog mode</em> property changes.</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+<h4 id='audio-stream-notifications' class='heading'>Audio Stream Notifications</h4>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Purpose</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>streamIsActiveDidChange</code></td>
+<td>Called whenever the audio stream <code>isActive</code> flag changes state.</td>
+</tr>
+<tr>
+<td><code>streamPhysicalFormatDidChange</code></td>
+<td>Called whenever the audio stream physical format changes.</td>
+</tr>
+</tbody></table>
 <h3 id='further-development-amp-patches' class='heading'>Further Development &amp; Patches</h3>
 
 <p>Do you want to contribute to the project? Please fork, patch, and then submit a pull request!</p>

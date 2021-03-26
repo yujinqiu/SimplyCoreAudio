@@ -122,7 +122,8 @@
 
                 </div>
               </div>
-            
+            <p>Audio Hardware Notifications</p>
+
           </div>
         </section>
 
@@ -130,6 +131,117 @@
           <div class="section-content">
             <div class="task-group">
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE25defaultInputDeviceChangedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultInputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE25defaultInputDeviceChangedABvpZ">defaultInputDeviceChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the default input device changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultInputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE26defaultOutputDeviceChangedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultOutputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE26defaultOutputDeviceChangedABvpZ">defaultOutputDeviceChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the default output device changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultOutputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE32defaultSystemOutputDeviceChangedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/defaultSystemOutputDeviceChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE32defaultSystemOutputDeviceChangedABvpZ">defaultSystemOutputDeviceChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the default system output device changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultSystemOutputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE17deviceListChangedABvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/deviceListChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE17deviceListChangedABvpZ">deviceListChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called whenever the list of hardware devices and device subdevices changes.
+(i.e., devices that are part of <em>Aggregate</em> or <em>Multi-Output</em> devices.)</p>
+
+<p>Returned <code>userInfo</code> object will contain the keys <code>addedDevices</code> and <code>removedDevices</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">deviceListChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -500,117 +612,6 @@ audio devices (either physical or virtual.)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE17deviceListChangedABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/deviceListChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE17deviceListChangedABvpZ">deviceListChanged</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called whenever the list of hardware devices and device subdevices changes.
-(i.e., devices that are part of <em>Aggregate</em> or <em>Multi-Output</em> devices.)</p>
-
-<p>Returned <code>userInfo</code> object will contain the keys <code>addedDevices</code> and <code>removedDevices</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">deviceListChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE25defaultInputDeviceChangedABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/defaultInputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE25defaultInputDeviceChangedABvpZ">defaultInputDeviceChanged</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called whenever the default input device changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultInputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE26defaultOutputDeviceChangedABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/defaultOutputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE26defaultOutputDeviceChangedABvpZ">defaultOutputDeviceChanged</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called whenever the default output device changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultOutputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE32defaultSystemOutputDeviceChangedABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/defaultSystemOutputDeviceChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE32defaultSystemOutputDeviceChangedABvpZ">defaultSystemOutputDeviceChanged</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Called whenever the default system output device changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultSystemOutputDeviceChanged</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:So18NSNotificationNamea15SimplyCoreAudioE23streamIsActiveDidChangeABvpZ"></a>
                     <a name="//apple_ref/swift/Variable/streamIsActiveDidChange" class="dashAnchor"></a>
                     <a class="token" href="#/s:So18NSNotificationNamea15SimplyCoreAudioE23streamIsActiveDidChangeABvpZ">streamIsActiveDidChange</a>
@@ -621,7 +622,7 @@ audio devices (either physical or virtual.)
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called whenever the audio stream <code>isActive</code> flag changes state.</p>
+                        <p>Called whenever the audio stream <code>isActive</code> flag changes.</p>
 
                       </div>
                       <div class="declaration">
