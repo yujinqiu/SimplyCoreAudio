@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           SimplyCoreAudio Docs
         </a>
-         (100% documented)
+         (99% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -1426,11 +1426,11 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Default%20Device%20Functions"></a>
-                <a name="//apple_ref/swift/Section/Default Device Functions" class="dashAnchor"></a>
+                <a name="/Default%20Device%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Default Device Properties" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Default%20Device%20Functions"></a>
-                  <h3 class="section-name"><p>Default Device Functions</p>
+                  <a class="section-name-link" href="#/Default%20Device%20Properties"></a>
+                  <h3 class="section-name"><p>Default Device Properties</p>
 </h3>
                 </div>
               </div>
@@ -1438,9 +1438,9 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15SimplyCoreAudio0C6DeviceC017setAsDefaultInputD0SbyF"></a>
-                    <a name="//apple_ref/swift/Method/setAsDefaultInputDevice()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC017setAsDefaultInputD0SbyF">setAsDefaultInputDevice()</a>
+                    <a name="/s:15SimplyCoreAudio0C6DeviceC014isDefaultInputD0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDefaultInputDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC014isDefaultInputD0Sbvp">isDefaultInputDevice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1448,21 +1448,16 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Promotes this device to become the default input device.</p>
+                        <p>Allows getting and setting this device as the default input device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">setAsDefaultInputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDefaultInputDevice</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1470,9 +1465,9 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15SimplyCoreAudio0C6DeviceC018setAsDefaultOutputD0SbyF"></a>
-                    <a name="//apple_ref/swift/Method/setAsDefaultOutputDevice()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC018setAsDefaultOutputD0SbyF">setAsDefaultOutputDevice()</a>
+                    <a name="/s:15SimplyCoreAudio0C6DeviceC015isDefaultOutputD0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDefaultOutputDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC015isDefaultOutputD0Sbvp">isDefaultOutputDevice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1480,21 +1475,16 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Promotes this device to become the default output device.</p>
+                        <p>Allows getting and setting this device as the default output device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">setAsDefaultOutputDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDefaultOutputDevice</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
                       </div>
                     </section>
                   </div>
@@ -1502,9 +1492,9 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:15SimplyCoreAudio0C6DeviceC018setAsDefaultSystemD0SbyF"></a>
-                    <a name="//apple_ref/swift/Method/setAsDefaultSystemDevice()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC018setAsDefaultSystemD0SbyF">setAsDefaultSystemDevice()</a>
+                    <a name="/s:15SimplyCoreAudio0C6DeviceC021isDefaultSystemOutputD0Sbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDefaultSystemOutputDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:15SimplyCoreAudio0C6DeviceC021isDefaultSystemOutputD0Sbvp">isDefaultSystemOutputDevice</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1512,21 +1502,16 @@ used by this device. In most occasions this will be channels 1 and 2.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Promotes this device to become the default system output device.</p>
+                        <p>Allows getting and setting this device as the default system output device.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">setAsDefaultSystemDevice</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDefaultSystemOutputDevice</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p><code>true</code> on success, <code>false</code> otherwise.</p>
                       </div>
                     </section>
                   </div>
