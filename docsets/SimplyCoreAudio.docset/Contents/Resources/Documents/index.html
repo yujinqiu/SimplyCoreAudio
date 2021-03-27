@@ -188,10 +188,9 @@
 </code></pre></li>
 <li><p>Subscribe to hardware-related notifications</p>
 <pre class="highlight swift"><code><span class="c1">// e.g., subscribing to `deviceListChanged` notification.</span>
-<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
-    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceListChanged</span><span class="p">,</span>
-    <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
-    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceListChanged</span><span class="p">,</span>
+                                                       <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+                                                        <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Get added devices.</span>
     <span class="k">guard</span> <span class="k">let</span> <span class="nv">addedDevices</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span><span class="p">?[</span><span class="s">"addedDevices"</span><span class="p">]</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">AudioDevice</span><span class="p">]</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
@@ -208,10 +207,9 @@
 <span class="k">let</span> <span class="nv">device</span> <span class="o">=</span> <span class="n">simplyCA</span><span class="o">.</span><span class="n">defaultOutputDevice</span>
 
 <span class="c1">// e.g., subscribing to `deviceNominalSampleRateDidChange` notification.</span>
-<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
-    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceNominalSampleRateDidChange</span><span class="p">,</span>
-    <span class="nv">object</span><span class="p">:</span> <span class="n">device</span><span class="p">,</span>
-    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">deviceNominalSampleRateDidChange</span><span class="p">,</span>
+                                                       <span class="nv">object</span><span class="p">:</span> <span class="n">device</span><span class="p">,</span>
+                                                        <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Handle notification.</span>
 <span class="p">}</span>
 
@@ -228,10 +226,9 @@
 <span class="k">guard</span> <span class="k">let</span> <span class="nv">stream0</span> <span class="o">=</span> <span class="n">streams</span><span class="o">.</span><span class="n">first</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
 <span class="c1">// e.g., subscribing to `streamPhysicalFormatDidChange` notification.</span>
-<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span>
-    <span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">streamPhysicalFormatDidChange</span><span class="p">,</span>
-    <span class="nv">object</span><span class="p">:</span> <span class="n">stream0</span><span class="p">,</span>
-    <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
+<span class="k">var</span> <span class="nv">observer</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">forName</span><span class="p">:</span> <span class="o">.</span><span class="n">streamPhysicalFormatDidChange</span><span class="p">,</span>
+                                                       <span class="nv">object</span><span class="p">:</span> <span class="n">stream0</span><span class="p">,</span>
+                                                        <span class="nv">queue</span><span class="p">:</span> <span class="o">.</span><span class="n">main</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">notification</span><span class="p">)</span> <span class="k">in</span>
     <span class="c1">// Handle notification.</span>
 <span class="p">}</span>
 
