@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/ruben/src/frameworks/SimplyCoreAudio/Sources/SimplyCoreAudio/Public/SimplyCoreAudio.swift",
-      "line": 116,
+      "line": 115,
       "symbol": "SimplyCoreAudio.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
