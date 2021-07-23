@@ -21,7 +21,9 @@ public extension SimplyCoreAudio {
     func createAggregateDevice(masterDevice: AudioDevice,
                                secondDevice: AudioDevice?,
                                named name: String,
-                               uid: String, multiOutput: Bool = false) -> AudioDevice?
+                               uid: String,
+                               modelUID: String = "Unknown",
+                               multiOutput: Bool = false) -> AudioDevice?
     {
         guard let masterDeviceUID = masterDevice.uid else { return nil }
 
@@ -37,6 +39,7 @@ public extension SimplyCoreAudio {
         let desc: [String: Any] = [
             kAudioAggregateDeviceNameKey: name,
             kAudioAggregateDeviceUIDKey: uid,
+            kAudioDevicePropertyModelUIDKey: modelUID,
             kAudioAggregateDeviceSubDeviceListKey: deviceList,
             kAudioAggregateDeviceMasterSubDeviceKey: masterDeviceUID,
             kAudioAggregateDeviceIsStackedKey: multiOutput ? 1 : 0
