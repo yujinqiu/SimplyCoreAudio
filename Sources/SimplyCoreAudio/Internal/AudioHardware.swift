@@ -71,6 +71,10 @@ final class AudioHardware {
     var allAggregateDevices: [AudioDevice] {
         allDevices.filter { $0.isAggregateDevice }
     }
+    
+    var allVirtualDevices: [AudioDevice] {
+        allDevices.filter { $0.isVirtual }
+    }
 
     var defaultInputDevice: AudioDevice? {
         defaultDevice(of: kAudioHardwarePropertyDefaultInputDevice)
