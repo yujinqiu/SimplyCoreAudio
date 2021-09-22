@@ -78,6 +78,13 @@ public final class SimplyCoreAudio {
         hardware.allAggregateDevices
     }
 
+    /// All the devices that are virtual devices.
+    ///
+    /// - Returns: An array of `AudioDevice` objects.
+    public var allVirtualDevices: [AudioDevice] {
+        hardware.allVirtualDevices
+    }
+
     // MARK: - Default Devices
 
     /// The default input device.
