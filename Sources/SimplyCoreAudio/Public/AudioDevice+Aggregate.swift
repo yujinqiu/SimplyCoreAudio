@@ -10,10 +10,19 @@ import Foundation
 // MARK: - Aggregate Device Functions
 
 public extension AudioDevice {
+    @available(*, deprecated, renamed: "isAggregate")
     /// - Returns: `true` if this device is an aggregate one, `false` otherwise.
+    /// This implement has bug when we create aggregate device but not sublist.
     var isAggregateDevice: Bool {
         guard let aggregateDevices = ownedAggregateDevices else { return false }
         return !aggregateDevices.isEmpty
+    }
+    
+    var isAggregate: Bool {
+        guard let transportType = transportType else {
+            return false
+        }
+        return transportType == .aggregate
     }
 
     /// All the subdevices of this aggregate device
