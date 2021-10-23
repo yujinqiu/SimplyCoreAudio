@@ -421,7 +421,7 @@ final class AudioDeviceTests: SCATestCase {
             return
         }
 
-        XCTAssertTrue(device.isAggregateDevice)
+        XCTAssertTrue(device.isAggregate)
         XCTAssertTrue(device.ownedAggregateDevices?.count == 1)
 
         wait(for: 2)
