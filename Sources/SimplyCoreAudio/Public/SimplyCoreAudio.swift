@@ -85,6 +85,32 @@ public final class SimplyCoreAudio {
         hardware.allVirtualDevices
     }
 
+    // MARK: - System Builtin Devices
+
+    /// System built-in speaker device
+    ///
+    ///- Returns: *(optional)* An `AudioDevice`.
+    lazy public var speakerDevice: AudioDevice? = {
+        for ear in allOutputDevices {
+            if ear.transportType == .builtIn {
+                return ear
+            }
+        }
+        return nil
+    }()
+
+    /// System built-in microphone device
+    ///
+    ///- Returns: *(optional)* An `AudioDevice`.
+    lazy public var microphoneDevice: AudioDevice? = {
+        for ear in allInputDevices {
+            if ear.transportType == .builtIn {
+                return ear
+            }
+        }
+        return nil
+    }()
+
     // MARK: - Default Devices
 
     /// The default input device.
