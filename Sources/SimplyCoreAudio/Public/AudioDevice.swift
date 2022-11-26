@@ -46,6 +46,11 @@ public final class AudioDevice: AudioObject {
 
         cachedDeviceName = super.name
     }
+    
+    // BeMyEars 2.0 we don't need specified device.
+    init() {
+        super.init(objectID: AudioObjectID())
+    }
 
     deinit {
         AudioObjectPool.shared.remove(objectID)
