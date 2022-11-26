@@ -48,7 +48,7 @@ public final class AudioDevice: AudioObject {
     }
     
     // BeMyEars 2.0 we don't need specified device.
-    init() {
+    public init() {
         super.init(objectID: AudioObjectID())
     }
 
