@@ -29,6 +29,10 @@ public final class AudioDevice: AudioObject {
     // MARK: - Private Properties
 
     private var cachedDeviceName: String?
+    
+    // BeMyEars 3.0 will fakeDeviceName
+    public var fakeDeviceName: String?
+    
     private var isRegisteredForNotifications = false
 
     // MARK: - Lifecycle Functions
@@ -48,7 +52,8 @@ public final class AudioDevice: AudioObject {
     }
     
     // BeMyEars 2.0 we don't need specified device.
-    public init() {
+    public init(name: String? = nil) {
+        self.fakeDeviceName = name
         super.init(objectID: AudioObjectID())
     }
 
