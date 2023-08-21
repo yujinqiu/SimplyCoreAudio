@@ -32,6 +32,10 @@ public final class AudioDevice: AudioObject {
     
     // BeMyEars 3.0 will fakeDeviceName
     public var fakeDeviceName: String?
+    // Set fakeUID alis name to avoid common bug
+    public var fakeUID: String? {
+        return fakeDeviceName
+    }
     
     private var isRegisteredForNotifications = false
 
